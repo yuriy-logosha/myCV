@@ -1,5 +1,44 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div
+        a(href=image): img(src=image)
+        div
+            h1= title
+            p #{positions[currentPositionIndex].role} at #{positions[currentPositionIndex].company}
+            div.phone=phone
+            div.email=email
+            a(href=linkedin) LinkedIn Profile
+    hr
+    div.summary
+        h3.title Summary
+        div.summary=summary
+
+    hr
+    div.experience
+        h3 Experience
+        div.position
+            for position in positions
+                div.title #{position.role} at #{position.company}
+                div.period #{position.from} - #{position.to}
+                span.description=position.description
+    hr
+    div.education
+        h3 Education
+        div.school
+            for school in schools
+                div.title=school.name
+                div.period #{school.from} - #{school.to}
+                span.description=school.graduationLevel
+    hr
+    div.certificates
+        h3 Certifications
+        div.certificate
+            for certificate in certificates
+                div(style="inline-block")
+                    a(href=certificate.url, class="badge"): img(src=certificate.pic)
+                div(style="inline-block")
+                    div.title=certificate.title
+                    div.validity=certificate.issued
+                    a(href=certificate.url) View details
+
