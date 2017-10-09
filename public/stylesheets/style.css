@@ -1,22 +1,22 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 .experience h3, .education h3, .email {
-  color: darkgray;
+    color: darkgray;
 }
 
 .experience .title, .education .title {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .position .title {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 .image {
@@ -37,3 +37,4 @@ img:hover {
 .certificate {
     display: block;
 }
+

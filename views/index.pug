@@ -9,11 +9,13 @@ block content
             div.phone=phone
             div.email=email
             a(href=linkedin) LinkedIn Profile
+    br
     hr
     div.summary
         h3.title Summary
         div.summary=summary
 
+    br
     hr
     div.experience
         h3 Experience
@@ -22,6 +24,7 @@ block content
                 div.title #{position.role} at #{position.company}
                 div.period #{position.from} - #{position.to}
                 span.description=position.description
+    br
     hr
     div.education
         h3 Education
@@ -30,6 +33,7 @@ block content
                 div.title=school.name
                 div.period #{school.from} - #{school.to}
                 span.description=school.graduationLevel
+    br
     hr
     div.certificates
         h3 Certifications

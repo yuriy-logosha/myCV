@@ -25,3 +25,5 @@ typings/
 .yarn-integrity
 .env
 /.idea/
+
+.idea/
