@@ -3,14 +3,14 @@ extends layout
 block content
     div.head
         div.picture
-            a(href=image): img(src=image)
+            a(href=image, target="_blank"): img(src=image)
         div.summary
             h1= title
             p #{positions[currentPositionIndex].role} at #{positions[currentPositionIndex].company}
             p.phone=phone
             p.email=email
             p
-                a(href=linkedin) LinkedIn Profile
+                a(href=linkedin, target="_blank") LinkedIn Profile
 
     br
     hr
@@ -35,9 +35,12 @@ block content
         h3.group-title Education
         div.school
             for school in schools
-                div.title=school.name
-                div.period #{school.from} - #{school.to}
-                span.description=school.graduationLevel
+                div
+                    a(href=school.url, target="_blank").badge: img(src=school.logo)
+                div
+                    div.title=school.name
+                    div.period #{school.from} - #{school.to}
+                    span.description=school.graduationLevel
 
     br
     hr
@@ -45,11 +48,10 @@ block content
         h3.group-title Certifications
         div.certificate
             for certificate in certificates
-                div.picture
-                    a(href=certificate.url).badge: img(src=certificate.pic)
-                div.body
-                    div.title
-                        div.title=certificate.title
-                        div.validity=certificate.issued
+                div
+                    a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
+                div
+                    div.title=certificate.title
+                    div.validity=certificate.issued
 
 

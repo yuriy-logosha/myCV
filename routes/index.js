@@ -72,7 +72,9 @@ router.get('/', function (req, res, next) {
                     name: 'Odessa National Polytechnic University',
                     from: 'September 2000',
                     to: 'Jun 2005',
-                    graduationLevel: 'Specialist'
+                    graduationLevel: 'Specialist',
+                    url: 'http://opu.ua/eng',
+                    logo: 'http://opu.ua/images/logo4.png'
                 }
             ],
             certificates: [
@@ -80,7 +82,7 @@ router.get('/', function (req, res, next) {
                     title: 'Oracle Certified Associate, Java SE 8 Programmer',
                     issued: '10 Aug 2017',
                     url: 'https://www.youracclaim.com/badges/de3d4e6b-59fd-49d2-a2af-8ccff7c40cf6',
-                    pic: '/images/Oracle-Certification-badge_OC-Associate.png'
+                    logo: '/images/Oracle-Certification-badge_OC-Associate.png'
                 }
             ]
 
