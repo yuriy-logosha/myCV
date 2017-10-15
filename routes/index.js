@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
             summary: 'I love to develop & ship great Web applications that delight users.',
             positions: [
                 {
-                    company: 'Accenture',
+                    companyId: 3,
                     role: 'Team Lead/Technical Lead',
                     from: 'September 2014',
                     to: 'Present',
@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
                     ' applications, methodologies, processes and tools to support a client, project or entity.'
                 },
                 {
-                    company: 'Selectica/Determine',
+                    companyId: 2,
                     role: 'Technical Lead',
                     from: 'July 2013',
                     to: 'September 2014',
@@ -35,7 +35,7 @@ router.get('/', function (req, res, next) {
                     ' API.\n' +
                     'Created code documentation, Wiki pages.'
                 },{
-                    company: 'Selectica/Determine',
+                    companyId: 2,
                     role: 'Business Solutions Architect',
                     from: 'September 2012',
                     to: 'July 2013',
@@ -46,7 +46,7 @@ router.get('/', function (req, res, next) {
                     ' API.\n' +
                     'Created code documentation, Wiki pages.'
                 },{
-                    company: 'Provectus, Inc',
+                    companyId: 1,
                     role: 'Java Developer',
                     from: 'January 2011',
                     to: 'September 2012',
@@ -57,7 +57,7 @@ router.get('/', function (req, res, next) {
                     'Page 2\n' +
                     'Struts, Spring MVC, Hibernate, Ant. JBoss, Tomcat. Oracle. Eclipse.'
                 },{
-                    company: 'Sea Traid Port of Yuzhny',
+                    companyId: 0,
                     role: 'Software Engineer',
                     from: 'January 2006',
                     to: 'January 2011',
@@ -67,6 +67,42 @@ router.get('/', function (req, res, next) {
                     ' DML).'
                 }
             ],
+            companies: [{
+                companyId: 0,
+                officialName: 'Port of Yuzhny, Ukraine',
+                contactDetails: {
+                    website: 'http://www.port.yuzhny.odessa.ua',
+                    email: 'webmaster@port.yuzhny.odessa.ua',
+                    phone: '+380 48 7507582'
+                }
+            },
+                {
+                    companyId: 1,
+                    officialName: 'Provectus, Inc',
+                    contactDetails: {
+                        website: '',
+                        email: '',
+                        phone: ''
+                    }
+                },
+                {
+                    companyId: 2,
+                    officialName: 'Selectica/Determine',
+                    contactDetails: {
+                        website: '',
+                        email: '',
+                        phone: ''
+                    }
+                },
+                {
+                    companyId: 3,
+                    officialName: 'Accenture',
+                    contactDetails: {
+                        website: '',
+                        email: '',
+                        phone: ''
+                    }
+                }],
             schools: [
                 {
                     name: 'Odessa National Polytechnic University',

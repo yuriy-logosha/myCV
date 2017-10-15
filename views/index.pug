@@ -15,7 +15,6 @@ block content
     br
     hr
     div.summary
-
         h3.group-title Summary
         div.summary=summary
 
@@ -25,7 +24,7 @@ block content
         h3.group-title Experience
         div.position
             for position in positions
-                div.title #{position.role} at #{position.company}
+                div.title #{position.role} at #{companies[position.companyId].officialName}
                 div.period #{position.from} - #{position.to}
                 span.description=position.description
 
