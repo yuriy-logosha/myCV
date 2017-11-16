@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    div.head
+    div.group.head
         div.picture
             a(href=image, target="_blank"): img(src=image)
         div.summary
@@ -12,15 +12,11 @@ block content
             p
                 a(href=linkedin, target="_blank") LinkedIn Profile
 
-    br
-    hr
-    div.summary
+    div.group.summary
         h3.group-title Summary
         div.summary=summary
 
-    br
-    hr
-    div.experience
+    div.group.experience
         h3.group-title Experience
         div.position
             for position in positions
@@ -28,29 +24,23 @@ block content
                 div.period #{position.from} - #{position.to}
                 span.description=position.description
 
-    br
-    hr
-    div.education
+    div.group.education
         h3.group-title Education
         div.school
             for school in schools
-                div
+                div.picture
                     a(href=school.url, target="_blank").badge: img(src=school.logo)
-                div
-                    div.title=school.name
-                    div.period #{school.from} - #{school.to}
-                    span.description=school.graduationLevel
+                div.summary
+                    p.title=school.name
+                    p.period #{school.from} - #{school.to}
+                    p.description=school.graduationLevel
 
-    br
-    hr
-    div.certificates
+    div.group.certificates
         h3.group-title Certifications
         div.certificate
             for certificate in certificates
-                div
+                div.picture
                     a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
-                div
-                    div.title=certificate.title
-                    div.validity=certificate.issued
-
-
+                div.summary
+                    p.title=certificate.title
+                    p.validity=certificate.issued
