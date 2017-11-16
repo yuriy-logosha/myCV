@@ -1,26 +1,32 @@
 body {
-    padding: 50px;
+    padding-left: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.head, .education, .certificates {
+.full-name {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.head, .school, .certificate {
     overflow: hidden;
 }
 
-.head div, .education div, .certificates div {
+.head div, .school div, .certificate div {
     float: left;
 }
 
 .head .picture img {
-    margin: 25px 15px 0 0;
+    margin: 10px 15px 0 0;
     width: 150px;
 }
 
 a {
+    text-decoration: none;
     color: #00B7FF;
 }
-.group {
 
+.group {
     padding-bottom: 10px;
     border-bottom-color: darkgray;
     border-bottom-style: solid;
@@ -30,23 +36,20 @@ a {
     color: darkgray;
 }
 
-.title, .period {
-    padding-bottom: 5px;
-}
-
 .experience .title, .education .title {
     font-weight: bold;
 }
 
-.position .title {
-    padding-top: 10px;
+.description {
+    padding: 0 20px;
+    text-align: justify;
 }
 
 .image {
     vertical-align: top;
 }
 
-.certificate .badge img {
+.certificate .badge img, .school .badge img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 2px;
@@ -65,3 +68,6 @@ img:hover {
     margin: 0 15px 0 0;
 }
 
+.patent {
+    text-indent: 30px;
+}

@@ -5,7 +5,7 @@ block content
         div.picture
             a(href=image, target="_blank"): img(src=image)
         div.summary
-            h1= title
+            h1.full-name= title
             p #{positions[currentPositionIndex].role} at #{companies[positions[currentPositionIndex].companyId].officialName}
             p.phone=phone
             p.email=email
@@ -20,27 +20,38 @@ block content
         h3.group-title Experience
         div.position
             for position in positions
-                div.title #{position.role} at #{companies[position.companyId].officialName}
-                div.period #{position.from} - #{position.to}
-                span.description=position.description
+                p.title #{position.role} at&nbsp;
+                    a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
+                p.period #{position.from} - #{position.to}
+                p.description=position.description
 
     div.group.education
         h3.group-title Education
-        div.school
-            for school in schools
+        for school in schools
+            div.school
                 div.picture
                     a(href=school.url, target="_blank").badge: img(src=school.logo)
                 div.summary
                     p.title=school.name
-                    p.period #{school.from} - #{school.to}
-                    p.description=school.graduationLevel
+                    p #{school.from} - #{school.to}
+                    p=school.graduationLevel
 
     div.group.certificates
         h3.group-title Certifications
-        div.certificate
-            for certificate in certificates
+        for certificate in certificates
+            div.certificate
                 div.picture
                     a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
                 div.summary
                     p.title=certificate.title
                     p.validity=certificate.issued
+
+    div.group.patents
+        h3.group-title Patents
+        for patent in patents
+            div.patent
+                div.summary
+                    p.title=patent.title
+                    p.validity=patent.issued
+                    p
+                        a(href=patent.url) See patent
