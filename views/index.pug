@@ -6,7 +6,7 @@ block content
             a(href=image, target="_blank"): img(src=image)
         div.summary
             h1= title
-            p #{positions[currentPositionIndex].role} at #{positions[currentPositionIndex].company}
+            p #{positions[currentPositionIndex].role} at #{companies[positions[currentPositionIndex].companyId].officialName}
             p.phone=phone
             p.email=email
             p
