@@ -14,7 +14,7 @@ block content
 
     div.group.summary
         h3.group-title Summary
-        div.summary=summary
+        p.description=summary
 
     div.group.experience
         h3.group-title Experience
@@ -22,7 +22,7 @@ block content
             for position in positions
                 p.title #{position.role} at&nbsp;
                     a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
-                p.period #{position.from} - #{position.to}
+                div.period #{position.from} - #{position.to}
                 p.description=position.description
 
     div.group.education
