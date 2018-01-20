@@ -8,9 +8,9 @@ router.get('/', function (req, res, next) {
     const filePath = os.tmpdir() + '/';
     const fileName = data.title + ' CV.pdf';
 
-    res.setHeader('Content-Disposition', 'inline; filename="' + encodeURIComponent(fileName) + '"');
+    res.setHeader('Content-Disposition', 'attachment; filename=' + fileName);
     res.contentType("application/pdf");
-    pdfBuilder.build(res, data, filePath, fileName);
+    pdfBuilder.build(res, data, filePath);
 
 });
 

@@ -3,11 +3,6 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.full-name {
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
 .head, .school, .certificate {
     overflow: hidden;
 }
@@ -17,8 +12,27 @@ body {
 }
 
 .head .picture img {
-    margin: 10px 15px 0 0;
+    /*margin: 25px 15px 0 0;*/
     width: 150px;
+}
+
+.full-name {
+    /*letter-spacing: 3px;*/
+    /*text-transform: uppercase;*/
+    margin: 0px;
+}
+
+.role {
+    padding-bottom: 10px;
+}
+
+.head .summary {
+    margin-left: 10px;
+}
+
+.head .summary p {
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
@@ -32,7 +46,7 @@ a {
     border-bottom-style: solid;
 }
 
-.group-title, .email {
+.group-title {
     color: darkgray;
 }
 

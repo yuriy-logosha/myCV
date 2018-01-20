@@ -5,12 +5,18 @@ block content
         div.picture
             a(href=image, target="_blank"): img(src=image)
         div.summary
-            h1.full-name= title
-            p #{positions[currentPositionIndex].role} at #{companies[positions[currentPositionIndex].companyId].officialName}
-            p.phone=phone
-            p.email=email
-            p
+            h1.full-name=title
+            div.role #{positions[currentPositionIndex].role} at #{companies[positions[currentPositionIndex].companyId].officialName}
+            p.location Location: #{address}
+            p.phone Phone: #{phone}
+            p.email Email: #{email}
+            p.skype Skype: #{skype}
+            p.options
                 a(href=linkedin, target="_blank") LinkedIn Profile
+                span &nbsp|&nbsp
+                a(href="pdf") PDF
+                span &nbsp|&nbsp
+                a(href="download") Download
 
     div.group.summary
         h3.group-title Summary
@@ -55,3 +61,11 @@ block content
                     p.validity=patent.issued
                     p
                         a(href=patent.url) See patent
+
+    div.group.projects
+        h3.group-title Projects
+        for project in projects
+            div.project
+                div.summary
+                    p.name=project.name
+                    p.description=project.description
