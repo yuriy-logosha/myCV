@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "deploy": "eb deploy myCV -v",
     "init": "eb init myCV -k cvOrganizer -p node.js -r us-west-2 -v",
-    "create": "eb create myCV -k cvOrganizer -p node.js --cfg myCV-sc2 --single -v"
+    "create": "eb create myCV -k cvOrganizer -p node.js --cfg myCV-sc2 --single -v",
+    "open": "eb open"
   },
   "dependencies": {
     "blob-stream": "^0.1.3",
