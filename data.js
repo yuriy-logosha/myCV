@@ -1,7 +1,7 @@
 var express = require('express');
 
 var _data = {
-    image: 'images/my-picture.jpg',
+    id: 'ylogosha',
     title: 'Iurii Logosha',
     currentPositionIndex: 0,
     email: 'yuriy.logosha@gmail.com',
@@ -31,14 +31,15 @@ var _data = {
             to: 'September 2014',
             description: 'Engaged in architectural objectives of the project. ' +
             'Provide architecture overview. Present solutions and POCs. ' +
+            'Translate business requirements into functional requirements documentation. ' +
             'Plan team work. Split business requirements into epics. ' +
             'Estimate stories.' +
             'Build development and delivery processes. ' +
-            'Design API and Facade layers. ' +
+            'Design API and Facade layers, services layer. ' +
             'Design project structure and maven dependency. ' +
             'Build required diagrams like behavioral, dependency diagrams and relational, and entity diagrams. ' +
             'Write code using Java. Write JSPs, Servlets and design page hierarchy. \n' +
-            'Used technologies: Spring MVC, Core, JavaScript, jQuery, Angular. Using Google Apps API. ' +
+            'Used technologies: Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
             'Write and maintain code documentation. ' +
             'SonarQube for track code and security quality. ' +
             'Maven for automate builds.'
@@ -110,7 +111,7 @@ var _data = {
         },
         {
             companyId: 3,
-            officialName: 'Accenture, Inc, Latvijas Filiale, Riga',
+            officialName: 'Accenture Inc, Latvijas Filiale, Riga',
             contactDetails: {
                 website: 'https://www.accenture.com/lv-en',
                 email: '',
@@ -140,7 +141,7 @@ var _data = {
             title: 'Oracle Certified Associate, Java SE 8 Programmer',
             issued: '10 Aug 2017',
             url: 'https://www.youracclaim.com/badges/de3d4e6b-59fd-49d2-a2af-8ccff7c40cf6',
-            logo: '/images/Oracle-Certification-badge_OC-Associate.png'
+            logo: 'images/Oracle-Certification-badge_OC-Associate.png'
         },
         {
             title: 'Scaled Agile Framework® Practitioner (SP) Certification Program',
@@ -199,4 +200,4 @@ var _data = {
 
 };
 
-module.exports = _data;
+module.exports = [_data];

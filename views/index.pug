@@ -3,7 +3,7 @@ extends layout
 block content
     div.group.head
         div.picture
-            a(href=image, target="_blank"): img(src=image)
+            a(href="/images/"+id+".jpg", target="_blank"): img(src="/images/"+id+".jpg")
         div.summary
             h1.full-name=title
             div.role #{positions[currentPositionIndex].role} at #{companies[positions[currentPositionIndex].companyId].officialName}
@@ -26,7 +26,7 @@ block content
         h3.group-title Experience
         div.position
             for position in positions
-                p.title #{position.role} at&nbsp;
+                div.title #{position.role} at&nbsp;
                     a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
                 div.period #{position.from} - #{position.to}
                 p.description=position.description
@@ -38,7 +38,7 @@ block content
                 div.picture
                     a(href=school.url, target="_blank").badge: img(src=school.logo)
                 div.summary
-                    p.title=school.name
+                    div.title=school.name
                     p #{school.from} - #{school.to}
                     p=school.graduationLevel
 
@@ -49,7 +49,7 @@ block content
                 div.picture
                     a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
                 div.summary
-                    p.title=certificate.title
+                    div.title=certificate.title
                     p.validity=certificate.issued
 
     div.group.patents
@@ -57,8 +57,8 @@ block content
         for patent in patents
             div.patent
                 div.summary
-                    p.title=patent.title
-                    p.validity=patent.issued
+                    div.title=patent.title
+                    div.validity=patent.issued
                     p
                         a(href=patent.url) See patent
 

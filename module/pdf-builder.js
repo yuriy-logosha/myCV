@@ -4,7 +4,7 @@ const fs = require('fs');
 
 var _builder = {
 
-    build: function(res, data, filePath, fileName) {
+    build: function(res, data) {
 
         const defaultFontSize = 12;
         const defaultSectionFontSize = 14;
@@ -23,11 +23,7 @@ var _builder = {
         doc.info.Producer = data.title;
         doc.info.Keywords = "CV, Curriculum Vitae, job, resume, java, developer, web, developer, webdev, devops, software, engineer, ylogosha";
 
-        doc.pipe(fs.createWriteStream(filePath + fileName));
-
-        doc.pipe(res);
-
-        doc.image('public/' + data.image, 75, 30, {width: 120});
+        doc.image('public/images/' + data.id + '.jpg', 75, 30, {width: 120});
 
         doc.fontSize(16)
             .font(boldFont)
@@ -83,6 +79,8 @@ var _builder = {
             doc.text(school.description, pageLineConfig);
             doc.moveDown();
         })
+
+        doc.pipe(res);
 
         doc.end();
 
