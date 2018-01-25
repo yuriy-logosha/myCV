@@ -3,8 +3,9 @@ const router = express.Router();
 const data = require('../data');
 const pdfBuilder = require('../module/pdf-builder');
 
-router.get('/', function (req, res, next) {
-    const user = data.find((e)=>{return e.id = "ylogosha"});
+router.route('/:id')
+    .get(function (req, res) {
+    const user = data.find((e) => {return e.id === req.params.id});
     const fileName = user.title + ' CV.pdf';
 
     res.setHeader('Content-Disposition', 'inline; filename="' + encodeURIComponent(fileName) + '"');

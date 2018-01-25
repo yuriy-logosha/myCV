@@ -6,7 +6,11 @@ block content
             a(href="/images/"+id+".jpg", target="_blank"): img(src="/images/"+id+".jpg")
         div.summary
             h1.full-name=title
-            div.role #{positions[currentPositionIndex].role} at #{companies[positions[currentPositionIndex].companyId].officialName}
+            if currentPositionIndex
+                div
+                    div.role #{positions[currentPositionIndex].role}
+                    div &nbsp;at&nbsp;
+                    div.companyName #{companies[positions[currentPositionIndex].companyId].officialName}
             p.location Location: #{address}
             p.phone Phone: #{phone}
             p.email Email: #{email}
@@ -14,22 +18,24 @@ block content
             p.options
                 a(href=linkedin, target="_blank") LinkedIn Profile
                 span &nbsp|&nbsp
-                a(href="pdf") PDF
+                a(href="/pdf/"+id) PDF
                 span &nbsp|&nbsp
-                a(href="download") Download
+                a(href="/download/"+id) Download
 
     div.group.summary
         h3.group-title Summary
         p.description=summary
 
-    div.group.experience
-        h3.group-title Experience
-        div.position
-            for position in positions
-                div.title #{position.role} at&nbsp;
+    if positions
+        div.group.experience
+            h3.group-title Experience
+            div.position
+                for position in positions
+                    span.title #{position.role}
+                    span &nbsp;at&nbsp;
                     a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
-                div.period #{position.from} - #{position.to}
-                p.description=position.description
+                    p.period #{position.from} - #{position.to}
+                    p.description=position.description
 
     div.group.education
         h3.group-title Education
@@ -42,30 +48,33 @@ block content
                     p #{school.from} - #{school.to}
                     p=school.graduationLevel
 
-    div.group.certificates
-        h3.group-title Certifications
-        for certificate in certificates
-            div.certificate
-                div.picture
-                    a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
-                div.summary
-                    div.title=certificate.title
-                    p.validity=certificate.issued
+    if certificates
+        div.group.certificates
+            h3.group-title Certifications
+            for certificate in certificates
+                div.certificate
+                    div.picture
+                        a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
+                    div.summary
+                        div.title=certificate.title
+                        p.validity=certificate.issued
 
-    div.group.patents
-        h3.group-title Patents
-        for patent in patents
-            div.patent
-                div.summary
-                    div.title=patent.title
-                    div.validity=patent.issued
-                    p
-                        a(href=patent.url) See patent
+    if patents
+        div.group.patents
+            h3.group-title Patents
+            for patent in patents
+                div.patent
+                    div.summary
+                        div.title=patent.title
+                        div.validity=patent.issued
+                        p
+                            a(href=patent.url) See patent
 
-    div.group.projects
-        h3.group-title Projects
-        for project in projects
-            div.project
-                div.summary
-                    p.name=project.name
-                    p.description=project.description
+    if projects
+        div.group.projects
+            h3.group-title Projects
+            for project in projects
+                div.project
+                    div.summary
+                        p.name=project.name
+                        p.description=project.description

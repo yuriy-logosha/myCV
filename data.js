@@ -1,6 +1,6 @@
 var express = require('express');
 
-var _data = {
+var _data = [{
     id: 'ylogosha',
     title: 'Iurii Logosha',
     currentPositionIndex: 0,
@@ -141,7 +141,7 @@ var _data = {
             title: 'Oracle Certified Associate, Java SE 8 Programmer',
             issued: '10 Aug 2017',
             url: 'https://www.youracclaim.com/badges/de3d4e6b-59fd-49d2-a2af-8ccff7c40cf6',
-            logo: 'images/Oracle-Certification-badge_OC-Associate.png'
+            logo: '/images/Oracle-Certification-badge_OC-Associate.png'
         },
         {
             title: 'Scaled Agile Framework® Practitioner (SP) Certification Program',
@@ -195,9 +195,27 @@ var _data = {
             description: 'Develop UI components and pages. Fix legacy bugs. Migrate legacy code to modern MVC.'
         }
     ]
+},
+    {
+        id: 'klogosha',
+        title: 'Kateryna Logosha',
+        email: 'kateryna.logosha@gmail.com',
+        phone: '+371',
+        skype: 'katerina.skvorcova',
+        address: 'Riga, Latvia',
+        linkedin: '',
+        summary: 'I...',
+        schools: [
+            {
+                name: 'Odessa National Polytechnic University',
+                from: 'September 2003',
+                to: 'Jun 2007',
+                graduationLevel: 'Barchelor\'s degree +, EQ Level 6',
+                url: 'http://opu.ua/eng',
+                logo: 'http://opu.ua/images/logo4.png'
+            }
+        ]
+    }
+];
 
-
-
-};
-
-module.exports = [_data];
+module.exports = _data;
