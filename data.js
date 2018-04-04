@@ -147,7 +147,7 @@ var _data = [{
             title: 'Scaled Agile Framework® Practitioner (SP) Certification Program',
             issued: 'Dec 2015',
             url: 'https://www.linkedin.com/company/2434776/',
-            logo: 'https://media.licdn.com/mpr/mpr/shrink_100_100/p/7/005/049/1fa/0c368ff.png'
+            logo: '/images/safe.png'
         }
     ],
     patents: [
