@@ -162,7 +162,8 @@ var _data = [{
             name: 'Global Fraud Monitoring and Prevention',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer',
-            description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities.'
+            description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. System contains many internal subsystems. One of processes retrieve data from hBase and using needed isolation levels transform into convenient format and send to analysis system.\n' +
+            'Kafka with it\'s topics in a center of big picture.'
         },
         {
             name: 'Banking Contract Management',
@@ -192,7 +193,8 @@ var _data = [{
             name: 'Contract Lifecycle Management',
             numberOfMember: 6,
             role: 'UI Developer',
-            description: 'Develop UI components and pages. Fix legacy bugs. Migrate old legacy code to a modern MVC framework.'
+            description: 'Develop UI components and pages using Java, HTML, CSS and Javascript. \n' +
+            'Migrate old legacy code to a modern MVC framework.'
         }
     ]
 },
