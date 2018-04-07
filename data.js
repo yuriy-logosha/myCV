@@ -159,16 +159,16 @@ var _data = [{
     ],
     projects: [
         {
-            name: 'GFM',
-            numberOfMember: 5,
-            role: 'Java Developer, Full-Stack Developer',
-            description: 'Banking'
+            name: 'Global Fraud Monitoring and Prevention',
+            numberOfMember: 6,
+            role: 'Back-End Java Developer, Full-Stack Developer',
+            description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities.'
         },
         {
             name: 'Banking Contract Management',
-            numberOfMember: 6,
+            numberOfMember: 7,
             role: 'Full-Stack Developer',
-            description: ''
+            description: 'Service to help user register an organization and organization members as an agreement with the Bank. And be able manipulate with an accesses and permissions. Syncronize inputted data with third party system.'
         },
         {
             name: 'Claims Organizing',
@@ -192,7 +192,7 @@ var _data = [{
             name: 'Contract Lifecycle Management',
             numberOfMember: 6,
             role: 'UI Developer',
-            description: 'Develop UI components and pages. Fix legacy bugs. Migrate legacy code to modern MVC.'
+            description: 'Develop UI components and pages. Fix legacy bugs. Migrate old legacy code to a modern MVC framework.'
         }
     ]
 },
