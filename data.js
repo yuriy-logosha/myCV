@@ -163,10 +163,10 @@ var _data = [{
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer',
             description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. System contains many internal subsystems. One of processes retrieve data from hBase and using needed isolation levels transform into convenient format and send to analysis system.\n' +
-            'Kafka with it\'s topics in a center of big picture.'
+                'Kafka with it\'s topics in a center of big picture.'
         },
         {
-            name: 'Banking Contract Management',
+            name: 'Banking Contract Management for Private Customers',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
             description: 'Service to help user register an organization and organization members as an agreement with the Bank. And be able manipulate with an accesses and permissions. Syncronize inputted data with third party system.'
@@ -174,27 +174,30 @@ var _data = [{
         {
             name: 'Claims Organizing',
             numberOfMember: 6,
-            role: '',
-            description: ''
+            role: 'Full-Stack Developer',
+            description: 'Bank clerks wants to see Mainfraim data organised in a way they provided. ' +
+                'The system needs to stay connected to Mainfraim and be able to retrieve and filter data and met acceptance criteria for performance and UX.'
         },
         {
-            name: '',
+            name: 'Rapid Configuration Framework',
             numberOfMember: 4,
-            role: '',
-            description: ''
-        },
-        {
-            name: '',
-            numberOfMember: 4,
-            role: '',
-            description: ''
+            role: 'Java Developer',
+            description: 'Some systems needs to be configured automatically. ' +
+                'The program should be able to generate configuration according to rules. The program should be started as a CLI application but should also support WEB interface UI. '
         },
         {
             name: 'Contract Lifecycle Management',
             numberOfMember: 6,
             role: 'UI Developer',
             description: 'Develop UI components and pages using Java, HTML, CSS and Javascript. \n' +
-            'Migrate old legacy code to a modern MVC framework.'
+                'Migrate old legacy code to a modern MVC framework. \n'
+        },
+        {
+            name: 'Corporate Contract Management',
+            numberOfMember: 4,
+            role: 'Software Engineer',
+            description: 'The system should be able in a very fast manner give users ability to save clients data in a defined format. The format provided by Users defined in specification. ' +
+                'The application should be able to generate documents for signature. UI should be user friendly.'
         }
     ]
 },
