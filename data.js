@@ -162,8 +162,17 @@ var _data = [{
             name: 'Global Fraud Monitoring and Prevention',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer',
-            description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. System contains many internal subsystems. One of processes retrieve data from hBase and using needed isolation levels transform into convenient format and send to analysis system.\n' +
-                'Kafka with it\'s topics in a center of big picture.'
+            description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. ' +
+                'System contains many internal subsystems. One of processes retrieve data from hBase and using needed ' +
+                'isolation levels transform into convenient format and send to analysis system.\n' +
+                'Kafka with it\'s topics in a center of big picture. Application shoud be fully configurable and should ' +
+                'be able to work asynchronously with its nodes but should avoid data duplication. \n' +
+                'Team located an several locations support Agile principles and follow SAFe practices. \n' +
+                'Project released several times and successfully working on Production. \n' +
+                'For support continuously build and deploy the app, configured Jenkins with pipelines plugin. \n' +
+                'Application written on Java using Apache Camel. And wrapped with Spring Boot. \n' +
+                'Deployment process separated for several common for other connected projects steps. ' +
+                'And contains steps: Build, make RPM, deploy, install, configure as a service, run and validate.'
         },
         {
             name: 'Banking Contract Management for Private Customers',
