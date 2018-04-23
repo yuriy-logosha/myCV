@@ -178,7 +178,7 @@ var _data = [{
             name: 'Banking Contract Management for Private Customers',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
-            description: 'Service to help user register an organization and organization members as an agreement with the Bank. And be able manipulate with an accesses and permissions. Syncronize inputted data with third party system.'
+            description: 'Service to help user register an organization and organization members as an agreement with the Bank. And be able manipulate with an accesses and permissions. Synchronize inputted data with third party system.'
         },
         {
             name: 'Claims Organizing',
