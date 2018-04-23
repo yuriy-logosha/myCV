@@ -184,8 +184,11 @@ var _data = [{
             name: 'Claims Organizing',
             numberOfMember: 6,
             role: 'Full-Stack Developer',
-            description: 'Bank clerks wants to see Mainfraim data organised in a way they provided. ' +
-                'The system needs to stay connected to Mainfraim and be able to retrieve and filter data and met acceptance criteria for performance and UX.'
+            description: 'Service for internal use. Placed on a corporate Liferay portal using portlets. ' +
+                'Clerks wants to see Mainfraim (COBOL) data organised in a way they provided. ' +
+                'The system needs to stay connected to Mainfraim and be able to retrieve and filter data ' +
+                'and met acceptance criteria for performance and UX. Users wants to be able to filter out some data.' +
+                'Application written on Java for JBoss.'
         },
         {
             name: 'Rapid Configuration Framework',
