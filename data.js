@@ -123,7 +123,7 @@ var _data = [{
             name: 'Odessa National Polytechnic University',
             from: 'September 2000',
             to: 'Jun 2005',
-            graduationLevel: 'Barchelor\'s degree +, EQ Level 6',
+            graduationLevel: 'Barchelor\'s degree +, EQF Level 6',
             url: 'http://opu.ua/eng',
             logo: 'http://opu.ua/images/logo4.png'
         },
@@ -159,7 +159,19 @@ var _data = [{
     ],
     projects: [
         {
+            name: 'Customer Orders System',
+            sphere: 'Telecommunication, Documents',
+            numberOfMember: 35,
+            role: 'Solution Architect, Full-Stack Developer',
+            description: 'Telecom companies willing to combine different data coming from different applications ' +
+                'like from mobile phones, Pads and tablets, laptops, smart watches, etc. into single application ' +
+                'that will handle all requests and respond in a high speed manner. The system needs to support old ' +
+                'legacy mainframe databases and provide services for new modern data storages like SAP HANA. ' +
+                'Mostly it\'s back-end processing, service oriented, Weblogic based system.'
+        },
+        {
             name: 'Global Fraud Monitoring and Prevention',
+            sphere: 'Banking, Security, Integration',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer',
             description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. ' +
@@ -176,12 +188,14 @@ var _data = [{
         },
         {
             name: 'Banking Contract Management for Private Customers',
+            sphere: '',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
             description: 'Service to help user register an organization and organization members as an agreement with the Bank. And be able manipulate with an accesses and permissions. Synchronize inputted data with third party system.'
         },
         {
             name: 'Claims Organizing',
+            sphere: '',
             numberOfMember: 6,
             role: 'Full-Stack Developer',
             description: 'Service for internal use. Placed on a corporate Liferay portal using portlets. ' +
@@ -192,6 +206,7 @@ var _data = [{
         },
         {
             name: 'Rapid Configuration Framework',
+            sphere: '',
             numberOfMember: 4,
             role: 'Java Developer',
             description: 'Some systems needs to be configured automatically. ' +
@@ -199,6 +214,7 @@ var _data = [{
         },
         {
             name: 'Contract Lifecycle Management',
+            sphere: '',
             numberOfMember: 6,
             role: 'UI Developer',
             description: 'Develop UI components and pages using Java, HTML, CSS and Javascript. \n' +
@@ -206,6 +222,7 @@ var _data = [{
         },
         {
             name: 'Corporate Contract Management',
+            sphere: '',
             numberOfMember: 4,
             role: 'Software Engineer',
             description: 'The system should be able in a very fast manner give users ability to save clients data in a defined format. The format provided by Users defined in specification. ' +

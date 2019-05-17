@@ -6,14 +6,17 @@ block content
             a(href="/images/"+id+".jpg", target="_blank"): img(src="/images/"+id+".jpg")
         div.summary
             h1.full-name=title
-            if currentPositionIndex
+            if currentPositionIndex >= 0
                 div
                     div.role #{positions[currentPositionIndex].role}
-                    div &nbsp;at&nbsp;
-                    div.companyName #{companies[positions[currentPositionIndex].companyId].officialName}
+                    if unbranded === false
+                        div &nbsp;at&nbsp;
+                        div.companyName #{companies[positions[currentPositionIndex].companyId].officialName}
             p.location Location: #{address}
             p.phone Phone: #{phone}
-            p.email Email: #{email}
+            p.email
+                div Email:&nbsp;
+                a(href='mailto:'+ email) #{email}
             p.skype Skype: #{skype}
             p.options
                 a(href=linkedin, target="_blank") LinkedIn Profile
@@ -32,8 +35,9 @@ block content
             div.position
                 for position in positions
                     span.title #{position.role}
-                    span &nbsp;at&nbsp;
-                    a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
+                    if unbranded === false
+                        span &nbsp;at&nbsp;
+                        a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
                     p.period #{position.from} - #{position.to}
                     p.description=position.description
 

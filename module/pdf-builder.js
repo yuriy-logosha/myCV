@@ -17,7 +17,7 @@ var _builder = {
 
         doc.font(pageFont);
 
-        doc.info.Title = data.title + ", CV";
+        doc.info.Title = data.title + ", Curriculum Vitae";
         doc.info.Subject = "Curriculum Vitae";
         doc.info.Creator = data.title;
         doc.info.Producer = data.title;
@@ -34,12 +34,18 @@ var _builder = {
         doc.moveDown();
 
         doc.fontSize(defaultFontSize);
-        doc.text(data.positions[data.currentPositionIndex].role + ' at ' + data.companies[data.positions[data.currentPositionIndex].companyId].officialName);
+
+        var currentRole = data.positions[data.currentPositionIndex].role;
+
+        doc.text(currentRole + ((!data.unbranded)?' at ' + data.companies[data.positions[data.currentPositionIndex].companyId].officialName:''));
 
         doc.moveDown();
 
         doc
-            .text('Location: ' + data.address)
+            .text('Location: ' + data.address);
+        doc.fontSize(5).moveDown().fontSize(defaultFontSize);
+
+        doc
             .text('Phone: ' + data.phone)
             .text('Email: ' + data.email)
             .text('Skype: ' + data.skype);
@@ -60,12 +66,12 @@ var _builder = {
 
         doc.font(pageFont);
         data.positions.forEach(function(position){
-            doc.font(boldFont).text(position.from + ' - ' + position.to + ', ' + position.role);
+            doc.font(boldFont).text(position.from + ' - ' + position.to + ((!data.unbranded)?', ' + position.role:''));
 
             doc.font(pageFont).text(position.description, pageLineConfig);
 
             doc.moveDown();
-        })
+        });
 
         doc.font(boldFont)
             .fontSize(defaultSectionFontSize)
@@ -78,7 +84,29 @@ var _builder = {
             doc.text(school.from + ' - ' + school.to + ', ' + school.name);
             doc.text(school.description, pageLineConfig);
             doc.moveDown();
-        })
+        });
+
+        doc.addPage();
+
+        doc.font(boldFont)
+            .fontSize(defaultSectionFontSize)
+            .text('Projects', 75);
+
+        doc.fontSize(3).moveDown().fontSize(defaultFontSize);
+
+        doc.font(pageFont);
+
+        data.projects.forEach(function(project){
+            doc.font(boldFont).text(project.name).fontSize(defaultFontSize);
+            doc.fontSize(3).moveDown().fontSize(defaultFontSize);
+
+            doc.font(pageFont).text("Members: " + project.numberOfMember).fontSize(defaultFontSize);
+            doc.fontSize(5).moveDown().fontSize(defaultFontSize);
+
+            doc.font(pageFont).text(project.description, pageLineConfig);
+
+            doc.moveDown();
+        });
 
         doc.pipe(res);
 
