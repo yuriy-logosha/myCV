@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mycv
+  labels:
+    app: mycv
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: mycv
+      labels:
+        app: mycv
+    spec:
+      containers:
+        - name: mycv
+          image: gcr.io/cv-manager/mycv
+          ports:
+            - containerPort: 8082
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: mycv

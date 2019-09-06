@@ -9,6 +9,41 @@ var _builder = {
         const defaultFontSize = 12;
         const defaultSectionFontSize = 14;
         const pageWidth = 470;
+        const defaultFont = 'Times-Roman';
+        const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
+
+        const pageLineConfig = {width: pageWidth, align: 'justify'};
+        const doc = new PDFDocument();
+
+        doc.font(defaultFont);
+
+        doc.info.Title = data['title'] || "";
+        doc.info.Subject = data['subject'] || "";
+        doc.info.Creator = data['creator'] || "";
+        doc.info.Producer = data['producer'] || "";
+        doc.info.Keywords = data['keywords'] || "";
+
+
+        data.rows.forEach(
+            row => {
+                doc
+                    .fontSize(row['size'] || data['fontSize'] || defaultFontSize)
+                    .font(row['bold']?boldFont:(row['font'] || defaultFont))
+                    .text(row['value'] + '\n' || "");
+            //doc.moveDown();
+            }
+        );
+
+        doc.pipe(res);
+
+        doc.end();
+    },
+
+    buildCV: function(res, data) {
+
+        const defaultFontSize = 12;
+        const defaultSectionFontSize = 14;
+        const pageWidth = 470;
         const pageFont = 'Times-Roman';
         const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
 
@@ -99,8 +134,13 @@ var _builder = {
         data.projects.forEach(function(project){
             doc.font(boldFont).text(project.name).fontSize(defaultFontSize);
             doc.fontSize(3).moveDown().fontSize(defaultFontSize);
+            doc.font(boldFont).text(data.companies[project.companyId].officialName + ', ' + project.from + ' - ' + project.to + ', ' + project.describedPeriod).fontSize(defaultFontSize);
+            doc.fontSize(3).moveDown().fontSize(defaultFontSize);
 
             doc.font(pageFont).text("Members: " + project.numberOfMember).fontSize(defaultFontSize);
+            doc.fontSize(5).moveDown().fontSize(defaultFontSize);
+
+            doc.font(pageFont).text("Role: " + project.role).fontSize(defaultFontSize);
             doc.fontSize(5).moveDown().fontSize(defaultFontSize);
 
             doc.font(pageFont).text(project.description, pageLineConfig);
@@ -111,7 +151,6 @@ var _builder = {
         doc.pipe(res);
 
         doc.end();
-
     }
 };
 module.exports = _builder;

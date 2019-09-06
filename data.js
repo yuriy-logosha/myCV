@@ -13,7 +13,7 @@ var _data = [{
     positions: [
         {
             companyId: 3,
-            role: 'Team Lead/Technical Lead',
+            role: 'Team Lead\\Technical Lead',
             from: 'September 2014',
             to: 'Present',
             description: 'Design, develop, and configure software systems to meet market and/or client requirements either end-to-end' +
@@ -72,11 +72,12 @@ var _data = [{
             role: 'Software Engineer',
             from: 'January 2006',
             to: 'January 2011',
-            description: 'Develop software using Java 5 and 6 versions. ' +
+            description: 'Develop software using Java 5 and 6 versions. \n' +
             'Build user forms using Misrosoft Visual FoxPro 6, 7 and 9 versions. ' +
             'Write queries to Sybase database T-SQL language. ' +
             'Automation of activity of commercial and contractual department. ' +
-            'Database development: DDL. Database Design/Modeling (Power Designer). ' +
+            'Database development: DDL. \n' +
+                'Database Design\\Modeling (Power Designer). ' +
             'Build UI elements and user experience (front-end with DML). \n' +
             'Tools: ' +
             'Java, HTML, Servlets, HTML, CSS, SQL, XML, JSON, nginx. Oracle, Sybase, DB2'
@@ -102,7 +103,7 @@ var _data = [{
         },
         {
             companyId: 2,
-            officialName: 'Selectica/Determine, Inc., CA',
+            officialName: 'Selectica\\Determine Inc, CA',
             contactDetails: {
                 website: 'www.determine.com',
                 email: '',
@@ -160,73 +161,155 @@ var _data = [{
     projects: [
         {
             name: 'Customer Orders System',
-            sphere: 'Telecommunication, Documents',
+            sphere: 'Telecommunication, Security',
+            companyId: 3,
+            from: 'September 2018',
+            to: 'now',
+            describedPeriod: '1 month',
             numberOfMember: 35,
-            role: 'Solution Architect, Full-Stack Developer',
-            description: 'Telecom companies willing to combine different data coming from different applications ' +
-                'like from mobile phones, Pads and tablets, laptops, smart watches, etc. into single application ' +
-                'that will handle all requests and respond in a high speed manner. The system needs to support old ' +
-                'legacy mainframe databases and provide services for new modern data storages like SAP HANA. ' +
-                'Mostly it\'s back-end processing, service oriented, Weblogic based system.'
+            role: 'Full-Stack Developer, Java Expert, Test Automation SME',
+            description: 'Client has many distributed system\\services that uses the same single app for identify users. OpenIDM app has all needed tools to give that flexibility, ' +
+                'but it needs to be properly configured and has to be able synchronize data from different LDAP sources in proper moment. In some cases data ' +
+                'needs to be protected from reading and system needs to be ready to handle those situation. Also system needs to be highly available for ' +
+                'external services. \n' +
+                'Technologies\\Tools: Java 7, 8, Python, Groovy. \n' +
+                'State: In Production, maintainability pending'
         },
         {
-            name: 'Global Fraud Monitoring and Prevention',
+            name: 'Customer Orders System',
+            sphere: 'Telecommunication',
+            companyId: 3,
+            from: 'July 2018',
+            to: 'July 2019',
+            describedPeriod: '1 year',
+            numberOfMember: 35,
+            role: 'Solution Architect, Full-Stack Developer, Test Automation SME',
+            description: 'The company willing to combine different data coming from different applications/channels ' +
+                'like from mobile devices and WEB application, batch processes into single communication point application ' +
+                'that will handle all requests and respond in a high speed manner. The system needs to support old ' +
+                'legacy mainframe databases and provide services for new modern data storages like SAP HANA. ' +
+                'Mostly it\'s back-end processing, service oriented, Weblogic based system. \n' +
+                'Technologies\\Tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
+                'Currently in Production.'
+        },
+        {
+            name: 'Global Fraud Monitoring',
             sphere: 'Banking, Security, Integration',
+            companyId: 3,
+            from: 'January 2018',
+            to: 'July 2018',
+            describedPeriod: '6 months',
             numberOfMember: 6,
-            role: 'Back-End Java Developer, Full-Stack Developer',
+            role: 'Back-End Java Developer, Full-Stack Developer, Test Automation SME',
             description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. ' +
                 'System contains many internal subsystems. One of processes retrieve data from hBase and using needed ' +
                 'isolation levels transform into convenient format and send to analysis system.\n' +
                 'Kafka with it\'s topics in a center of big picture. Application shoud be fully configurable and should ' +
                 'be able to work asynchronously with its nodes but should avoid data duplication. \n' +
                 'Team located an several locations support Agile principles and follow SAFe practices. \n' +
-                'Project released several times and successfully working on Production. \n' +
+                'Project released and on Production. \n' +
                 'For support continuously build and deploy the app, configured Jenkins with pipelines plugin. \n' +
                 'Application written on Java using Apache Camel. And wrapped with Spring Boot. \n' +
                 'Deployment process separated for several common for other connected projects steps. ' +
-                'And contains steps: Build, make RPM, deploy, install, configure as a service, run and validate.'
+                'And contains steps: Build, make RPM, deploy, install, configure as a service, run and validate. \n' +
+                'Technologies\\Tools: Java 8, Maven, Kafka, Redis. Mockito.\n'+
+                'Currently in Production.'
         },
         {
             name: 'Banking Contract Management for Private Customers',
-            sphere: '',
+            sphere: 'Banking, Financial, Documents Management',
+            companyId: 3,
+            from: ' October 2015',
+            to: 'December 2017',
+            describedPeriod: '1 year 10 months',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
-            description: 'Service to help user register an organization and organization members as an agreement with the Bank. And be able manipulate with an accesses and permissions. Synchronize inputted data with third party system.'
+            description: 'Service to help users register an own organization and employees, and sign agreement with the Bank. ' +
+                'And to be able manipulate with an accesses and permissions. Also this information should be shared with third party services by ' +
+                'providing REST access points.'
         },
         {
             name: 'Claims Organizing',
-            sphere: '',
+            sphere: 'Banking, Financial',
+            companyId: 3,
+            from: 'September 2014',
+            to: ' October 2015',
+            describedPeriod: '1 year, 1 month',
             numberOfMember: 6,
             role: 'Full-Stack Developer',
             description: 'Service for internal use. Placed on a corporate Liferay portal using portlets. ' +
-                'Clerks wants to see Mainfraim (COBOL) data organised in a way they provided. ' +
-                'The system needs to stay connected to Mainfraim and be able to retrieve and filter data ' +
-                'and met acceptance criteria for performance and UX. Users wants to be able to filter out some data.' +
-                'Application written on Java for JBoss.'
+                'Clerks wants to see Mainfraim (COBOL) data well organised. ' +
+                'The system needs to stay connected to Mainfraim and be highly available and responsible, and needs ' +
+                'to be able to retrieve and filter data, and met acceptance criteria for performance and UX. \n' +
+                'Has been implemented reach filtering functionality.\n' +
+                'Service has been written on Java 7 for JBoss and Liferay. DB2, Servlets, Spring, PowerMock, Maven'
         },
         {
-            name: 'Rapid Configuration Framework',
-            sphere: '',
-            numberOfMember: 4,
-            role: 'Java Developer',
-            description: 'Some systems needs to be configured automatically. ' +
-                'The program should be able to generate configuration according to rules. The program should be started as a CLI application but should also support WEB interface UI. '
-        },
-        {
-            name: 'Contract Lifecycle Management',
-            sphere: '',
+            name: 'Contract Lifecycle Management, Custom Services',
+            sphere: 'Documents Management',
+            companyId: 2,
+            from: 'July 2013',
+            to: 'September 2014',
+            describedPeriod: '1 year 1 month',
             numberOfMember: 6,
-            role: 'UI Developer',
-            description: 'Develop UI components and pages using Java, HTML, CSS and Javascript. \n' +
-                'Migrate old legacy code to a modern MVC framework. \n'
+            role: 'Solution Architect, SME, Team Lead',
+            description: 'Lead a team of 6 engineers distributed geographically. \n' +
+                'Direct, review, and approve features design and changes. Architected solutions for Contract Management Application. ' +
+                'Team produced many client specific configurations for CLM.' +
+                'Integrated Contract Life Cycle Management with Ecosign and Docusign.\n' +
+                'Tools: PowerPoint, Java, JSON, XML, Javascript, Jenkins, SonarQube, GIT\n'+
+                'Currently in Production.'
+        },
+        {
+            name: 'Rapid Configuration Framework, R&D',
+            sphere: 'Documents Management, Public, Financial',
+            companyId: 2,
+            from: 'July 2013',
+            to: 'July 2012',
+            describedPeriod: '1 year',
+            numberOfMember: 4,
+            role: 'Senior Java Developer',
+            description: 'CLM need to be configured automatically and people only need to write a templates with rules. ' +
+                'The rules needs to be processed in particular moment. The program should be able to generate ' +
+                'configuration according to rules. The program should be started as a CLI application but should also ' +
+                'support WEB interface UI. \n' +
+                'Tools: Java, Maven, REST, Mockito, Jenkins, GIT\n'+
+                'Current state: In production.'
+        },
+        {
+            name: 'Contract Lifecycle Management, R&D Department',
+            sphere: 'Documents Management',
+            companyId: 2,
+            from: 'January 2010',
+            to: 'July 2012',
+            describedPeriod: '2 year 7 month',
+            numberOfMember: 6,
+            role: 'UI Developer, Senior Java Developer',
+            description: 'Contracts aren’t static documents. They’re leverageable assets your organization uses to minimize risk, ' +
+                'maximize opportunities, achieve compliance and generate revenue. Modular, cloud-based Contract Management ' +
+                'on the Determine Cloud Platform makes them fast to create, with self-service and collaborative features that ' +
+                'simplify day-to-day searching, authoring and contract administration. Verified, real-time data on the Determine Core ' +
+                'gives all users, from procurement to legal to sales, the visibility and insights to turn every contract ' +
+                'into a powerful decision-making tool. \n' +
+                'Developed UI components and web pages using Java 6 and 7, HTML4/5, CSS2/3 and Javascript. ' +
+                'Plain Java application was made to help business organize signing contracts process. The app ' +
+                'was using Java Server Pages to render UI. One of a task was to migrate old legacy code ' +
+                '(built on Java 5 + HTML generation inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). ' +
+                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n' +
+                'Tools: Java, Javascript, Amazon Web Services (s2), Spring, JSON, XML\\XSD, jUnit, Mockito, Jenkins.\n'+
+                'Currently in production.'
         },
         {
             name: 'Corporate Contract Management',
-            sphere: '',
+            sphere: 'Documents Management',
+            companyId: 3,
+            from: 'October 2005',
+            to: 'December 2010',
+            describedPeriod: '5 years 2 months',
             numberOfMember: 4,
             role: 'Software Engineer',
             description: 'The system should be able in a very fast manner give users ability to save clients data in a defined format. The format provided by Users defined in specification. ' +
-                'The application should be able to generate documents for signature. UI should be user friendly.'
+                'The application should be able to generate documents for sign. Interface was made according to user needs.'
         }
     ]
 },
