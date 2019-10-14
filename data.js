@@ -9,20 +9,20 @@ var _data = [{
     skype: 'splayn',
     address: 'Riga, Latvia',
     linkedin: 'https://www.linkedin.com/in/logosha',
-    summary: 'I love to develop and ship great Web and Corporate applications that delight users and do it in a polite to a team members manner.',
+    summary: 'I love to develop and ship great applications that delight customers.',
     positions: [
         {
             companyId: 3,
-            role: 'Team Lead\\Technical Lead',
+            role: 'Team Lead, Technical Lead',
             from: 'September 2014',
             to: 'Present',
-            description: 'Design, develop, and configure software systems to meet market and/or client requirements either end-to-end' +
+            description: 'Design, develop and configure software systems to meet market and/or client requirements either end-to-end' +
             ' from analysis, design, implementation, quality assurance (including testing), to delivery and maintenance' +
             ' of the software product or system or for a specific phase of the lifecycle.' +
             ' Apply knowledge of technologies,' +
-            ' applications, methodologies, processes and tools to support a client, project or entity.\n' +
-            'Tools: AWS, GIT, Idea, Spring, JavaScript, jQuery, Maven, Docker, TDD, BDD, Unit and integration tests.' +
-            ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, NPM, Node.JS, ReactJS, Bower, Karma, Cucumber, nginx.'
+            ' applications, methodologies, processes and tools to support a client, project or entity.\n\n' +
+            'Tools: Java, Apache Kafka, AWS, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Docker, TDD, BDD, Unit and Automation tests.' +
+            ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Bower, Karma, Cucumber.'
         },
         {
             companyId: 2,
@@ -30,15 +30,15 @@ var _data = [{
             from: 'July 2013',
             to: 'September 2014',
             description: 'Engaged in architectural objectives of the project. ' +
-            'Provide architecture overview. Present solutions and POCs. ' +
+            'Provided architecture overview. Presented "to-be" design solutions and POCs. ' +
             'Translate business requirements into functional requirements documentation. ' +
             'Plan team work. Split business requirements into epics. ' +
-            'Estimate stories.' +
+            'Estimate stories. ' +
             'Build development and delivery processes. ' +
             'Design API and Facade layers, services layer. ' +
             'Design project structure and maven dependency. ' +
-            'Build required diagrams like behavioral, dependency diagrams and relational, and entity diagrams. ' +
-            'Write code using Java. Write JSPs, Servlets and design page hierarchy. \n' +
+            'Describe solutions with required diagrams: behavioral, dependency, relational and entity diagrams. ' +
+            'Write clean and powerful code using Java. Write JSPs, Servlets and design page hierarchy. \n\n' +
             'Used technologies: Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
             'Write and maintain code documentation. ' +
             'SonarQube for track code and security quality. ' +
@@ -51,7 +51,7 @@ var _data = [{
             description: 'Together with clients discuss future application and process. ' +
             'Deliver solution in an Agile way and short terms. ' +
             'Design a solution. Build a class diagram and dependency diagram. ' +
-            'Develop Tomcat based Java solutions.\n' +
+            'Develop Tomcat based Java solutions.\n\n' +
             'Tools: Spring MVC, Spring Core, Spring Security. Java, Servlets, JavaScript, jQuery, Bootstrap. Google Apps API. ' +
             'Write and maintain code documentation.'
         },{
@@ -63,7 +63,7 @@ var _data = [{
             'Migrate the user interface and UX from plain JavaScript & HTML/CSS to modern framework ExtJS4. ' +
             'Migrate legacy solution from Java 5 to Java 6.'+
             'Reorganize JSP structure and JavaScript.\n' +
-            'Cover with UI unit and module tests.\n' +
+            'Cover with UI unit and module tests.\n\n' +
             'Tools: ' +
             'Java, JSP, JavaScript, ExtJS, JSON, AJAX, HTML, CSS, XML. ' +
             'Struts, Spring MVC, Hibernate, Ant. JBoss, Apache Tomcat. Oracle DB. Eclipse. Perforce.'
@@ -76,9 +76,9 @@ var _data = [{
             'Build user forms using Misrosoft Visual FoxPro 6, 7 and 9 versions. ' +
             'Write queries to Sybase database T-SQL language. ' +
             'Automation of activity of commercial and contractual department. ' +
-            'Database development: DDL. \n' +
-                'Database Design\\Modeling (Power Designer). ' +
-            'Build UI elements and user experience (front-end with DML). \n' +
+            'Database development: DDL. ' +
+            'Database Design. Modeling with Power Designer. ' +
+            'Build reach UI elements. Sutisfy client with properly working software. \n\n' +
             'Tools: ' +
             'Java, HTML, Servlets, HTML, CSS, SQL, XML, JSON, nginx. Oracle, Sybase, DB2'
         }
@@ -112,7 +112,7 @@ var _data = [{
         },
         {
             companyId: 3,
-            officialName: 'Accenture Inc, Latvijas Filiale, Riga',
+            officialName: 'Accenture Inc, Riga',
             contactDetails: {
                 website: 'https://www.accenture.com/lv-en',
                 email: '',
@@ -160,23 +160,24 @@ var _data = [{
     ],
     projects: [
         {
-            name: 'Customer Orders System',
+            name: 'Ericsson, Sweeden. Basic User Identity',
             sphere: 'Telecommunication, Security',
             companyId: 3,
             from: 'September 2018',
             to: 'now',
-            describedPeriod: '1 month',
-            numberOfMember: 35,
+            describedPeriod: '3 months',
+            numberOfMember: 8,
             role: 'Full-Stack Developer, Java Expert, Test Automation SME',
-            description: 'Client has many distributed system\\services that uses the same single app for identify users. OpenIDM app has all needed tools to give that flexibility, ' +
-                'but it needs to be properly configured and has to be able synchronize data from different LDAP sources in proper moment. In some cases data ' +
-                'needs to be protected from reading and system needs to be ready to handle those situation. Also system needs to be highly available for ' +
-                'external services. \n' +
+            description: 'When several UI applications using same backend, it needs to identify users making requests. ' +
+                'Client has many distributed system\\services that uses the same single app for identify users. ' +
+                'OpenIDM solution provide necessary tools to give that flexibility, ' +
+                'but it needs to be properly configured and has to be able synchronize data from different LDAP sources in proper moment. Also, caring about security, data ' +
+                'needs to be protected from outside. The system needs to be highly available for as external services always require it. \n\n' +
                 'Technologies\\Tools: Java 7, 8, Python, Groovy. \n' +
                 'State: In Production, maintainability pending'
         },
         {
-            name: 'Customer Orders System',
+            name: 'Telenor, Norway, Oslo. Customer Orders System',
             sphere: 'Telecommunication',
             companyId: 3,
             from: 'July 2018',
@@ -187,13 +188,13 @@ var _data = [{
             description: 'The company willing to combine different data coming from different applications/channels ' +
                 'like from mobile devices and WEB application, batch processes into single communication point application ' +
                 'that will handle all requests and respond in a high speed manner. The system needs to support old ' +
-                'legacy mainframe databases and provide services for new modern data storages like SAP HANA. ' +
-                'Mostly it\'s back-end processing, service oriented, Weblogic based system. \n' +
+                'legacy mainframe databases and provide services for SAP HANA. ' +
+                'Mostly it\'s back-end processing service oriented, Weblogic based system. \n\n' +
                 'Technologies\\Tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
                 'Currently in Production.'
         },
         {
-            name: 'Global Fraud Monitoring',
+            name: 'Nordea, Sweeden, Stokholm. Global Fraud Monitoring',
             sphere: 'Banking, Security, Integration',
             companyId: 3,
             from: 'January 2018',
@@ -201,22 +202,19 @@ var _data = [{
             describedPeriod: '6 months',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer, Test Automation SME',
-            description: 'Banking IT security services. Base on Kafka services to prevent fraud user activities. ' +
-                'System contains many internal subsystems. One of processes retrieve data from hBase and using needed ' +
-                'isolation levels transform into convenient format and send to analysis system.\n' +
-                'Kafka with it\'s topics in a center of big picture. Application shoud be fully configurable and should ' +
-                'be able to work asynchronously with its nodes but should avoid data duplication. \n' +
+            description: 'General idea is to prevent fraud user activities. Take analysis system and send all processing data into it.\n' +
+                'Kafka with it\'s topics in a center of big picture. Microservices are fully configurable and ' +
+                'are able to work asynchronously with its nodes, but should prevent also data duplication when same data sending from different threads. \n' +
                 'Team located an several locations support Agile principles and follow SAFe practices. \n' +
-                'Project released and on Production. \n' +
-                'For support continuously build and deploy the app, configured Jenkins with pipelines plugin. \n' +
+                'Project released and on Production. \n\n' +
+                'For support continuously build and deploy the app, have configured Jenkins jobs with pipelines plugin. \n' +
                 'Application written on Java using Apache Camel. And wrapped with Spring Boot. \n' +
-                'Deployment process separated for several common for other connected projects steps. ' +
-                'And contains steps: Build, make RPM, deploy, install, configure as a service, run and validate. \n' +
-                'Technologies\\Tools: Java 8, Maven, Kafka, Redis. Mockito.\n'+
+                'And contains steps: Build, make RPM, deploy, install, configure as a service, run and validate. \n\n' +
+                'Technologies\\Tools: Java 8, Maven, Apache Kafka, Apache Camel, Redis. MapReduce. Hadoop. Mockito.\n'+
                 'Currently in Production.'
         },
         {
-            name: 'Banking Contract Management for Private Customers',
+            name: 'OP. Finland, Helsinki. Banking Contract Management for Private Customers',
             sphere: 'Banking, Financial, Documents Management',
             companyId: 3,
             from: ' October 2015',
@@ -224,12 +222,12 @@ var _data = [{
             describedPeriod: '1 year 10 months',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
-            description: 'Service to help users register an own organization and employees, and sign agreement with the Bank. ' +
-                'And to be able manipulate with an accesses and permissions. Also this information should be shared with third party services by ' +
-                'providing REST access points.'
+            description: 'Service to help users register own organization and employees, and to sign agreements with the Bank. ' +
+                'And to be able manipulate with an accesses and permissions. Also this information shared with third party services by ' +
+                'REST API.'
         },
         {
-            name: 'Claims Organizing',
+            name: 'OP. Finland, Helsinki. Claims Organizing',
             sphere: 'Banking, Financial',
             companyId: 3,
             from: 'September 2014',
@@ -256,7 +254,7 @@ var _data = [{
             description: 'Lead a team of 6 engineers distributed geographically. \n' +
                 'Direct, review, and approve features design and changes. Architected solutions for Contract Management Application. ' +
                 'Team produced many client specific configurations for CLM.' +
-                'Integrated Contract Life Cycle Management with Ecosign and Docusign.\n' +
+                'Integrated Contract Life Cycle Management with Ecosign and Docusign.\n\n' +
                 'Tools: PowerPoint, Java, JSON, XML, Javascript, Jenkins, SonarQube, GIT\n'+
                 'Currently in Production.'
         },
@@ -272,7 +270,7 @@ var _data = [{
             description: 'CLM need to be configured automatically and people only need to write a templates with rules. ' +
                 'The rules needs to be processed in particular moment. The program should be able to generate ' +
                 'configuration according to rules. The program should be started as a CLI application but should also ' +
-                'support WEB interface UI. \n' +
+                'support WEB interface UI. \n\n' +
                 'Tools: Java, Maven, REST, Mockito, Jenkins, GIT\n'+
                 'Current state: In production.'
         },
@@ -295,7 +293,7 @@ var _data = [{
                 'Plain Java application was made to help business organize signing contracts process. The app ' +
                 'was using Java Server Pages to render UI. One of a task was to migrate old legacy code ' +
                 '(built on Java 5 + HTML generation inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). ' +
-                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n' +
+                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n\n' +
                 'Tools: Java, Javascript, Amazon Web Services (s2), Spring, JSON, XML\\XSD, jUnit, Mockito, Jenkins.\n'+
                 'Currently in production.'
         },
@@ -308,8 +306,8 @@ var _data = [{
             describedPeriod: '5 years 2 months',
             numberOfMember: 4,
             role: 'Software Engineer',
-            description: 'The system should be able in a very fast manner give users ability to save clients data in a defined format. The format provided by Users defined in specification. ' +
-                'The application should be able to generate documents for sign. Interface was made according to user needs.'
+            description: 'Helping to create electronic agreements. Tracking active and inactive periods. The format provided by Users defined in XML. ' +
+                'The application generates documents for sign and to attach it back. User interface was made according best development practices.'
         }
     ]
 },

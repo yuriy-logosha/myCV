@@ -1,0 +1,8 @@
+{
+    "cloudcode.profile-cluster-map": {
+        "[default]": "kubernetes-admin@kubernetes"
+    },
+    "cloudcode.profile-registry-map": {
+        "[default]": "docker.io/ylogosha"
+    }
+}

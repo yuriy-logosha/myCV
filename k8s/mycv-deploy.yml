@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
         - name: mycv
-          image: gcr.io/cv-manager/mycv
+          image: ylogosha/mycv
           ports:
             - containerPort: 8082
+              
       restartPolicy: Always
   selector:
     matchLabels:

@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mycv
+  name: mycv-svc
 spec:
   selector:
     app: mycv
+  type: NodePort  
   ports:
     - port: 8082
-      targetPort: 8082
-  type: ClusterIP
+      protocol: TCP
+      name: http

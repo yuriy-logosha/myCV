@@ -13,7 +13,15 @@ var _builder = {
         const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
 
         const pageLineConfig = {width: pageWidth, align: 'justify'};
-        const doc = new PDFDocument();
+        const doc = new PDFDocument({
+            autoFirstPage: false,
+            bufferPages: true
+        });
+
+        doc.on('pageAdded', () =>
+            //Add page number to the bottom of the every page
+            doc.fontSize(18).fillColor('deeppink')
+                .text("10", 10, 10));
 
         doc.font(defaultFont);
 
@@ -41,8 +49,8 @@ var _builder = {
 
     buildCV: function(res, data) {
 
-        const defaultFontSize = 12;
-        const defaultSectionFontSize = 14;
+        const defaultFontSize = 14;
+        const defaultSectionFontSize = 15;
         const pageWidth = 470;
         const pageFont = 'Times-Roman';
         const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
@@ -58,17 +66,17 @@ var _builder = {
         doc.info.Producer = data.title;
         doc.info.Keywords = "CV, Curriculum Vitae, job, resume, java, developer, web, developer, webdev, devops, software, engineer, ylogosha";
 
-        doc.image('public/images/' + data.id + '.jpg', 75, 30, {width: 120});
+        doc.image('public/images/' + data.id + '.jpg', 75, 30, {width: 135});
 
-        doc.fontSize(16)
+        doc.fontSize(18)
             .font(boldFont)
-            .text(data.title, 200, 30);
+            .text(data.title, 220, 30);
 
-        doc.font(pageFont);
+        doc.font(pageFont).fontSize(defaultFontSize);
 
         doc.moveDown();
 
-        doc.fontSize(defaultFontSize);
+        doc.font(pageFont).fontSize(defaultFontSize);
 
         var currentRole = data.positions[data.currentPositionIndex].role;
 
@@ -76,8 +84,7 @@ var _builder = {
 
         doc.moveDown();
 
-        doc
-            .text('Location: ' + data.address);
+        doc.text('Location: ' + data.address);
         doc.fontSize(5).moveDown().fontSize(defaultFontSize);
 
         doc
@@ -90,19 +97,27 @@ var _builder = {
         doc.font(boldFont)
             .fontSize(defaultSectionFontSize)
             .text('Summary', 75);
+
+        doc.font(pageFont).fontSize(defaultFontSize);
+
+        doc.moveDown();
+
         doc.font(pageFont).fontSize(defaultFontSize).text(data.summary, pageLineConfig);
 
         doc.moveDown();
 
         doc.font(boldFont)
             .fontSize(defaultSectionFontSize)
-            .text('Experience')
-            .fontSize(defaultFontSize);
+            .text('Experience');
 
-        doc.font(pageFont);
+        doc.font(pageFont).fontSize(defaultFontSize);
+
+        doc.moveDown();
+
+        doc.font(pageFont).fontSize(defaultFontSize);
         data.positions.forEach(function(position){
             doc.font(boldFont).text(position.from + ' - ' + position.to + ((!data.unbranded)?', ' + position.role:''));
-
+            doc.moveDown();
             doc.font(pageFont).text(position.description, pageLineConfig);
 
             doc.moveDown();
@@ -110,14 +125,17 @@ var _builder = {
 
         doc.font(boldFont)
             .fontSize(defaultSectionFontSize)
-            .text('Education', 75)
-            .fontSize(defaultFontSize);
+            .text('Education');
 
-        doc.font(pageFont);
+        doc.font(pageFont).fontSize(defaultFontSize);
+
+        doc.moveDown();
+
+        doc.font(pageFont).fontSize(defaultFontSize);
 
         data.schools.forEach(function(school){
             doc.text(school.from + ' - ' + school.to + ', ' + school.name);
-            doc.text(school.description, pageLineConfig);
+            doc.text(school.graduationLevel, pageLineConfig);
             doc.moveDown();
         });
 
@@ -127,7 +145,9 @@ var _builder = {
             .fontSize(defaultSectionFontSize)
             .text('Projects', 75);
 
-        doc.fontSize(3).moveDown().fontSize(defaultFontSize);
+        doc.font(pageFont).fontSize(defaultFontSize);
+
+        doc.moveDown();
 
         doc.font(pageFont);
 
@@ -147,6 +167,13 @@ var _builder = {
 
             doc.moveDown();
         });
+
+        // const range = doc.bufferedPageRange(); // => { start: 0, count: 2 }
+        // for (i = range.start, end = range.start + range.count, range.start <= end; i < end; i++) {
+        //     doc.switchToPage(i);
+        //     doc.text(`Page ${i + 1} of ${range.count}`);
+        // }
+
 
         doc.pipe(res);
 
