@@ -18,7 +18,7 @@ block content
                 div Email:&nbsp;
                 a(href='mailto:'+ email) #{email}
             p.skype Skype: #{skype}
-            p.options
+            p.options.no-print
                 a(href=linkedin, target="_blank") LinkedIn Profile
                 span &nbsp|&nbsp
                 a(href="/pdf/"+id) PDF
@@ -38,7 +38,7 @@ block content
                     if unbranded === false
                         span &nbsp;at&nbsp;
                         a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
-                    p.period #{position.from} - #{position.to}
+                    div.period #{position.from} - #{position.to}
                     p.description=position.description
 
     div.group.education
@@ -71,7 +71,7 @@ block content
                     div.summary
                         div.title=patent.title
                         div.validity=patent.issued
-                        p
+                        p.no-print
                             a(href=patent.url) See patent
 
     if projects
@@ -80,5 +80,9 @@ block content
             for project in projects
                 div.project
                     div.summary
-                        p.name=project.name
+                        div.name=project.name
+                        if unbranded === false
+                            a(href=companies[project.companyId].contactDetails.website) #{companies[project.companyId].officialName}, #{project.from} - #{project.to}, #{project.describedPeriod}
+                        div Members: #{project.numberOfMember}
+                        div Role: #{project.role}
                         p.description=project.description

@@ -86,3 +86,11 @@ img:hover {
 .patent {
     text-indent: 30px;
 }
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

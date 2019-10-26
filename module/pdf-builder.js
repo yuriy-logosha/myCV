@@ -13,15 +13,12 @@ var _builder = {
         const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
 
         const pageLineConfig = {width: pageWidth, align: 'justify'};
-        const doc = new PDFDocument({
-            autoFirstPage: false,
-            bufferPages: true
-        });
+        const doc = new PDFDocument();
 
-        doc.on('pageAdded', () =>
-            //Add page number to the bottom of the every page
-            doc.fontSize(18).fillColor('deeppink')
-                .text("10", 10, 10));
+        // doc.on('pageAdded', () =>
+        //     //Add page number to the bottom of the every page
+        //     doc.fontSize(18).fillColor('deeppink')
+        //         .text("10", 10, 10));
 
         doc.font(defaultFont);
 
@@ -32,15 +29,15 @@ var _builder = {
         doc.info.Keywords = data['keywords'] || "";
 
 
-        data.rows.forEach(
-            row => {
-                doc
-                    .fontSize(row['size'] || data['fontSize'] || defaultFontSize)
-                    .font(row['bold']?boldFont:(row['font'] || defaultFont))
-                    .text(row['value'] + '\n' || "");
-            //doc.moveDown();
-            }
-        );
+        // data.rows.forEach(
+        //     row => {
+        //         doc
+        //             .fontSize(row['size'] || data['fontSize'] || defaultFontSize)
+        //             .font(row['bold']?boldFont:(row['font'] || defaultFont))
+        //             .text(row['value'] + '\n' || "");
+        //     //doc.moveDown();
+        //     }
+        // );
 
         doc.pipe(res);
 
@@ -116,7 +113,7 @@ var _builder = {
 
         doc.font(pageFont).fontSize(defaultFontSize);
         data.positions.forEach(function(position){
-            doc.font(boldFont).text(position.from + ' - ' + position.to + ((!data.unbranded)?', ' + position.role:''));
+            doc.font(boldFont).text(position.from + ' - ' + position.to + ', ' + position.role +((!data.unbranded)?' at ' + data.companies[data.positions[data.currentPositionIndex].companyId].officialName:''));
             doc.moveDown();
             doc.font(pageFont).text(position.description, pageLineConfig);
 

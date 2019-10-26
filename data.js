@@ -13,16 +13,16 @@ var _data = [{
     positions: [
         {
             companyId: 3,
-            role: 'Team Lead, Technical Lead',
+            role: 'Technical Lead, Tech Arch',
             from: 'September 2014',
             to: 'Present',
             description: 'Design, develop and configure software systems to meet market and/or client requirements either end-to-end' +
             ' from analysis, design, implementation, quality assurance (including testing), to delivery and maintenance' +
             ' of the software product or system or for a specific phase of the lifecycle.' +
             ' Apply knowledge of technologies,' +
-            ' applications, methodologies, processes and tools to support a client, project or entity.\n\n' +
-            'Tools: Java, Apache Kafka, AWS, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Docker, TDD, BDD, Unit and Automation tests.' +
-            ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Bower, Karma, Cucumber.'
+            ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
+            'Tools: Java, Apache Kafka, AWS, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
+            ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold.'
         },
         {
             companyId: 2,
@@ -33,23 +33,23 @@ var _data = [{
             'Provided architecture overview. Presented "to-be" design solutions and POCs. ' +
             'Translate business requirements into functional requirements documentation. ' +
             'Plan team work. Split business requirements into epics. ' +
-            'Estimate stories. ' +
-            'Build development and delivery processes. ' +
+            'Estimated stories. Planning Poker.' +
+            'Organize development and delivery processes. ' +
             'Design API and Facade layers, services layer. ' +
             'Design project structure and maven dependency. ' +
             'Describe solutions with required diagrams: behavioral, dependency, relational and entity diagrams. ' +
-            'Write clean and powerful code using Java. Write JSPs, Servlets and design page hierarchy. \n\n' +
-            'Used technologies: Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
+            'Produced clean and well documented code. \n\n' +
+            'Used technologies: Servlet, Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
             'Write and maintain code documentation. ' +
             'SonarQube for track code and security quality. ' +
-            'Maven for automate builds.'
+            'Apache Maven for to automate CI.'
         },{
             companyId: 2,
             role: 'Business Solutions Architect, Java Developer',
             from: 'September 2012',
             to: 'July 2013',
             description: 'Together with clients discuss future application and process. ' +
-            'Deliver solution in an Agile way and short terms. ' +
+            'Deliver solution in an Agile way and iteration based manner (Sprints). ' +
             'Design a solution. Build a class diagram and dependency diagram. ' +
             'Develop Tomcat based Java solutions.\n\n' +
             'Tools: Spring MVC, Spring Core, Spring Security. Java, Servlets, JavaScript, jQuery, Bootstrap. Google Apps API. ' +
@@ -61,8 +61,8 @@ var _data = [{
             to: 'September 2012',
             description: 'Develop UI elements and pages using latest HTML/CSS technologies. '+
             'Migrate the user interface and UX from plain JavaScript & HTML/CSS to modern framework ExtJS4. ' +
-            'Migrate legacy solution from Java 5 to Java 6.'+
-            'Reorganize JSP structure and JavaScript.\n' +
+            'Migrate legacy solution from Java 5 to Java 6. '+
+            'Reorganize JSP structure and JavaScript. ' +
             'Cover with UI unit and module tests.\n\n' +
             'Tools: ' +
             'Java, JSP, JavaScript, ExtJS, JSON, AJAX, HTML, CSS, XML. ' +
@@ -75,10 +75,12 @@ var _data = [{
             description: 'Develop software using Java 5 and 6 versions. \n' +
             'Build user forms using Misrosoft Visual FoxPro 6, 7 and 9 versions. ' +
             'Write queries to Sybase database T-SQL language. ' +
-            'Automation of activity of commercial and contractual department. ' +
-            'Database development: DDL. ' +
-            'Database Design. Modeling with Power Designer. ' +
-            'Build reach UI elements. Sutisfy client with properly working software. \n\n' +
+            'Automation of activity of commercial and contractual department. \n' +
+            'Database development: ' +
+            'Plan data structure per module. Create tables, indexes, relations.' +
+            'Modeling diagrams and generate SQL with Power Designer. ' +
+            'Build reach UI elements and forms. Satisfy client with properly working software. \n' +
+            '\n' +
             'Tools: ' +
             'Java, HTML, Servlets, HTML, CSS, SQL, XML, JSON, nginx. Oracle, Sybase, DB2'
         }
@@ -103,7 +105,7 @@ var _data = [{
         },
         {
             companyId: 2,
-            officialName: 'Selectica\\Determine Inc, CA',
+            officialName: 'Determine Inc, CA',
             contactDetails: {
                 website: 'www.determine.com',
                 email: '',
@@ -121,15 +123,15 @@ var _data = [{
         }],
     schools: [
         {
-            name: 'Odessa National Polytechnic University',
+            name: 'Odessa National Polytechnic University, Ukraine',
             from: 'September 2000',
             to: 'Jun 2005',
             graduationLevel: 'Barchelor\'s degree +, EQF Level 6',
             url: 'http://opu.ua/eng',
-            logo: 'http://opu.ua/images/logo4.png'
+            logo: 'http://archive.opu.ua/images/logo4.png'
         },
         {
-            name: 'Odessa National Maritime University',
+            name: 'Odessa National Maritime University, Ukraine',
             from: 'September 2006',
             to: 'Jun 2008',
             graduationLevel: 'Master\'s degree, EQF Level 7',
@@ -165,15 +167,15 @@ var _data = [{
             companyId: 3,
             from: 'September 2018',
             to: 'now',
-            describedPeriod: '3 months',
+            describedPeriod: '2 months',
             numberOfMember: 8,
             role: 'Full-Stack Developer, Java Expert, Test Automation SME',
             description: 'When several UI applications using same backend, it needs to identify users making requests. ' +
                 'Client has many distributed system\\services that uses the same single app for identify users. ' +
                 'OpenIDM solution provide necessary tools to give that flexibility, ' +
                 'but it needs to be properly configured and has to be able synchronize data from different LDAP sources in proper moment. Also, caring about security, data ' +
-                'needs to be protected from outside. The system needs to be highly available for as external services always require it. \n\n' +
-                'Technologies\\Tools: Java 7, 8, Python, Groovy. \n' +
+                'needs to be protected from outside. The system needs to be highly available for as external services require it. \n\n' +
+                'Technologies and tools: Java 7, 8, Python, Groovy. \n' +
                 'State: In Production, maintainability pending'
         },
         {
@@ -185,12 +187,14 @@ var _data = [{
             describedPeriod: '1 year',
             numberOfMember: 35,
             role: 'Solution Architect, Full-Stack Developer, Test Automation SME',
-            description: 'The company willing to combine different data coming from different applications/channels ' +
-                'like from mobile devices and WEB application, batch processes into single communication point application ' +
-                'that will handle all requests and respond in a high speed manner. The system needs to support old ' +
+            description: 'The company combined streems of data coming from different applications/channels ' +
+                'like from mobile devices and WEB application, batch processes into the single, monolithic application ' +
+                'that handle all requests and respond in a high speed manner. The system needs to support old ' +
                 'legacy mainframe databases and provide services for SAP HANA. ' +
+                'One of current challenges is to split monolith into micro-services.' +
                 'Mostly it\'s back-end processing service oriented, Weblogic based system. \n\n' +
-                'Technologies\\Tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
+                'Technologies and tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
+                'Logs produced by slf4j collected by Splunk.\n' +
                 'Currently in Production.'
         },
         {
@@ -202,14 +206,12 @@ var _data = [{
             describedPeriod: '6 months',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer, Test Automation SME',
-            description: 'General idea is to prevent fraud user activities. Take analysis system and send all processing data into it.\n' +
-                'Kafka with it\'s topics in a center of big picture. Microservices are fully configurable and ' +
-                'are able to work asynchronously with its nodes, but should prevent also data duplication when same data sending from different threads. \n' +
-                'Team located an several locations support Agile principles and follow SAFe practices. \n' +
-                'Project released and on Production. \n\n' +
-                'For support continuously build and deploy the app, have configured Jenkins jobs with pipelines plugin. \n' +
-                'Application written on Java using Apache Camel. And wrapped with Spring Boot. \n' +
-                'And contains steps: Build, make RPM, deploy, install, configure as a service, run and validate. \n\n' +
+            description: 'General idea is to prevent from fraud activities. Took analysis system and sent all processing data into it.\n' +
+                'Kafka with it\'s topics in a center of big picture. Microservices are using topics are fully configurable and ' +
+                'are able to work asynchronously with its nodes, but also prevent from data duplication when same data sending from different threads. \n' +
+                'Team co-located in several locations and following Agile principles and SAFe practices. \n' +
+                'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. \n' +
+                'Application written on Java using Apache Camel with Spring Boot. \n' +
                 'Technologies\\Tools: Java 8, Maven, Apache Kafka, Apache Camel, Redis. MapReduce. Hadoop. Mockito.\n'+
                 'Currently in Production.'
         },
@@ -239,8 +241,11 @@ var _data = [{
                 'Clerks wants to see Mainfraim (COBOL) data well organised. ' +
                 'The system needs to stay connected to Mainfraim and be highly available and responsible, and needs ' +
                 'to be able to retrieve and filter data, and met acceptance criteria for performance and UX. \n' +
-                'Has been implemented reach filtering functionality.\n' +
-                'Service has been written on Java 7 for JBoss and Liferay. DB2, Servlets, Spring, PowerMock, Maven'
+                'Has been implemented reach filtering functionality using Apache Lucene.\n' +
+                'Service has been written on Java 7 for JBoss and Liferay. DB2, Servlets, Spring, PowerMock, Maven, Selenium. \n' +
+                'Logs collected into Elasticsearch and presented with Kibana.\n' +
+                'JMeter for load testing and performance analyze.\n' +
+                'Splunk for visualize produced logs.'
         },
         {
             name: 'Contract Lifecycle Management, Custom Services',
@@ -267,7 +272,8 @@ var _data = [{
             describedPeriod: '1 year',
             numberOfMember: 4,
             role: 'Senior Java Developer',
-            description: 'CLM need to be configured automatically and people only need to write a templates with rules. ' +
+            description: 'The idea is to automate configuration process. For that we were needed to broke down the existing process into ' +
+                'smaller, better organized modules. One was templates creation another rules maker. Templates were representing each document type.' +
                 'The rules needs to be processed in particular moment. The program should be able to generate ' +
                 'configuration according to rules. The program should be started as a CLI application but should also ' +
                 'support WEB interface UI. \n\n' +
@@ -288,21 +294,21 @@ var _data = [{
                 'on the Determine Cloud Platform makes them fast to create, with self-service and collaborative features that ' +
                 'simplify day-to-day searching, authoring and contract administration. Verified, real-time data on the Determine Core ' +
                 'gives all users, from procurement to legal to sales, the visibility and insights to turn every contract ' +
-                'into a powerful decision-making tool. \n' +
-                'Developed UI components and web pages using Java 6 and 7, HTML4/5, CSS2/3 and Javascript. ' +
-                'Plain Java application was made to help business organize signing contracts process. The app ' +
-                'was using Java Server Pages to render UI. One of a task was to migrate old legacy code ' +
-                '(built on Java 5 + HTML generation inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). ' +
-                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n\n' +
-                'Tools: Java, Javascript, Amazon Web Services (s2), Spring, JSON, XML\\XSD, jUnit, Mockito, Jenkins.\n'+
+                'into a powerful decision-making tool. ' +
+                'Developed UI components and web pages using Java 7, HTML5, CSS3 and JavaScript. ' +
+                'Plain Java application was made to help business organize signing contracts process. The application ' +
+                'was using Java Server Pages to render UI. One of a tasks was to migrate old legacy code ' +
+                '(built on Java 5 + HTML generation inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). \n' +
+                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n' +
+                'Tools: Java, Javascript, Amazon Web Services (s2), Spring, JSON, XML/XSD, jUnit, Mockito, Jenkins, Selenium. \n'+
                 'Currently in production.'
         },
         {
             name: 'Corporate Contract Management',
             sphere: 'Documents Management',
-            companyId: 3,
-            from: 'October 2005',
-            to: 'December 2010',
+            companyId: 0,
+            from: 'Oct 2005',
+            to: 'Dec 2010',
             describedPeriod: '5 years 2 months',
             numberOfMember: 4,
             role: 'Software Engineer',
@@ -326,8 +332,8 @@ var _data = [{
                 from: 'September 2003',
                 to: 'Jun 2007',
                 graduationLevel: 'Barchelor\'s degree +, EQ Level 6',
-                url: 'http://opu.ua/eng',
-                logo: 'http://opu.ua/images/logo4.png'
+                url: 'http://opu.ua/eng/',
+                logo: 'http://archive.opu.ua/images/logo4.png'
             }
         ]
     }
