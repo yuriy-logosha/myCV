@@ -115,7 +115,7 @@ var _data = [{
             companyId: 2,
             officialName: 'Determine Inc, Odessa, Ukraine',
             contactDetails: {
-                website: 'www.determine.com',
+                website: 'https://www.determine.com',
                 email: '',
                 phone: ''
             }
@@ -133,7 +133,7 @@ var _data = [{
                      companyId: 4,
                      officialName: 'C.T.Co, Riga, Latvia',
                      contactDetails: {
-                         website: 'ctco.lv',
+                         website: 'https://ctco.lv',
                          email: 'company@ctco.lv',
                          phone: '+371 669 520 00'
                      }
