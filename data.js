@@ -12,16 +12,24 @@ var _data = [{
     summary: 'I love to develop and ship great applications that delight customers.',
     positions: [
         {
+            companyId: 4,
+            role: 'Java, Web Developer',
+            from: 'April 2020',
+            to: 'Present',
+            description: 'Design, develop and configure software systems. \n' +
+            'Tools: Java, Spring Cloud, Ali Cloud, Spring Boot, Spring Security, JavaScript, React, Yarn.'
+        },
+        {
             companyId: 3,
             role: 'Technical Lead, Tech Arch',
             from: 'September 2014',
-            to: 'Present',
+            to: 'April 2020',
             description: 'Design, develop and configure software systems to meet market and/or client requirements either end-to-end' +
             ' from analysis, design, implementation, quality assurance (including testing), to delivery and maintenance' +
             ' of the software product or system or for a specific phase of the lifecycle.' +
             ' Apply knowledge of technologies,' +
             ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
-            'Tools: Java, Apache Kafka, AWS, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
+            'Tools: Java, Kotlin, Apache Kafka, AWS, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
             ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold.'
         },
         {
@@ -45,7 +53,7 @@ var _data = [{
             'Apache Maven for to automate CI.'
         },{
             companyId: 2,
-            role: 'Business Solutions Architect, Java Developer',
+            role: 'Business Solutions Architect',
             from: 'September 2012',
             to: 'July 2013',
             description: 'Together with clients discuss future application and process. ' +
@@ -105,7 +113,7 @@ var _data = [{
         },
         {
             companyId: 2,
-            officialName: 'Determine Inc, CA',
+            officialName: 'Determine Inc, Odessa, Ukraine',
             contactDetails: {
                 website: 'www.determine.com',
                 email: '',
@@ -114,13 +122,22 @@ var _data = [{
         },
         {
             companyId: 3,
-            officialName: 'Accenture Inc, Riga',
+            officialName: 'Accenture Inc, Riga, Latvia',
             contactDetails: {
                 website: 'https://www.accenture.com/lv-en',
                 email: '',
                 phone: '+67019700'
             }
-        }],
+        },
+                 {
+                     companyId: 4,
+                     officialName: 'C.T.Co, Riga, Latvia',
+                     contactDetails: {
+                         website: 'ctco.lv',
+                         email: 'company@ctco.lv',
+                         phone: '+371 669 520 00'
+                     }
+                 }],
     schools: [
         {
             name: 'Odessa National Polytechnic University, Ukraine',
@@ -175,7 +192,7 @@ var _data = [{
                 'OpenIDM solution provide necessary tools to give that flexibility, ' +
                 'but it needs to be properly configured and has to be able synchronize data from different LDAP sources in proper moment. Also, caring about security, data ' +
                 'needs to be protected from outside. The system needs to be highly available for as external services require it. \n\n' +
-                'Technologies and tools: Java 7, 8, Python, Groovy. \n' +
+                'Technologies and Tools: Java 7, 8, Python, Groovy. \n' +
                 'State: In Production, maintainability pending'
         },
         {
@@ -193,7 +210,7 @@ var _data = [{
                 'legacy mainframe databases and provide services for SAP HANA. ' +
                 'One of current challenges is to split monolith into micro-services.' +
                 'Mostly it\'s back-end processing service oriented, Weblogic based system. \n\n' +
-                'Technologies and tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
+                'Technologies and Tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
                 'Logs produced by slf4j collected by Splunk.\n' +
                 'Currently in Production.'
         },
@@ -212,7 +229,7 @@ var _data = [{
                 'Team co-located in several locations and following Agile principles and SAFe practices. \n' +
                 'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. \n' +
                 'Application written on Java using Apache Camel with Spring Boot. \n' +
-                'Technologies\\Tools: Java 8, Maven, Apache Kafka, Apache Camel, Redis. MapReduce. Hadoop. Mockito.\n'+
+                'Technologies and Tools: Java 8, Yaml, Maven, Apache Kafka, Apache Camel, Zookeper, Multithreading, Redis. MapReduce. Hadoop. Mockito. High Availability\n'+
                 'Currently in Production.'
         },
         {
@@ -224,9 +241,13 @@ var _data = [{
             describedPeriod: '1 year 10 months',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
-            description: 'Service to help users register own organization and employees, and to sign agreements with the Bank. ' +
-                'And to be able manipulate with an accesses and permissions. Also this information shared with third party services by ' +
-                'REST API.'
+            description: 'Service to help clients register their own organization structure and employees. ' +
+                'That`s allow small business generate bills for services provided without leaving online bank application or directly from mobile phone. ' +
+                'And allow common clients display unpayed and payed bills directly near bank account. ' +
+                'Application gives ability to manipulate with an accesses and privileges as not all employees needs to see everything. ' +
+                'Also this information shared with third party services by providing full REST API. \n' +
+                'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Maven, Virtualbox.\n' +
+                'Currently in production.'
         },
         {
             name: 'OP. Finland, Helsinki. Claims Organizing',
@@ -239,13 +260,15 @@ var _data = [{
             role: 'Full-Stack Developer',
             description: 'Service for internal use. Placed on a corporate Liferay portal using portlets. ' +
                 'Clerks wants to see Mainfraim (COBOL) data well organised. ' +
-                'The system needs to stay connected to Mainfraim and be highly available and responsible, and needs ' +
-                'to be able to retrieve and filter data, and met acceptance criteria for performance and UX. \n' +
+                'The system needs to stay connected to Mainfraim and be highly available and responsible. Also needs ' +
+                'to be able to retrieve and filter data, and met NFR for performance and corporate UX standards. \n' +
                 'Has been implemented reach filtering functionality using Apache Lucene.\n' +
-                'Service has been written on Java 7 for JBoss and Liferay. DB2, Servlets, Spring, PowerMock, Maven, Selenium. \n' +
+                'Service has been written on Java 7 for JBoss and Liferay. \n' +
                 'Logs collected into Elasticsearch and presented with Kibana.\n' +
                 'JMeter for load testing and performance analyze.\n' +
-                'Splunk for visualize produced logs.'
+                'Splunk for visualize produced logs.\n' +
+                'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Servlets, Spring, PowerMock, Maven, Selenium.' +
+                'Currently in Production.'
         },
         {
             name: 'Contract Lifecycle Management, Custom Services',
@@ -258,9 +281,9 @@ var _data = [{
             role: 'Solution Architect, SME, Team Lead',
             description: 'Lead a team of 6 engineers distributed geographically. \n' +
                 'Direct, review, and approve features design and changes. Architected solutions for Contract Management Application. ' +
-                'Team produced many client specific configurations for CLM.' +
-                'Integrated Contract Life Cycle Management with Ecosign and Docusign.\n\n' +
-                'Tools: PowerPoint, Java, JSON, XML, Javascript, Jenkins, SonarQube, GIT\n'+
+                'Team produced many client specific configurations for Contract Life Cycle Management application. ' +
+                'Integrated Contract Life Cycle Management with electronic signatures services: Ecosign and Docusign.\n\n' +
+                'Tools: PowerPoint, Java, Maven, JSON, XML, Javascript, Jenkins, SonarQube, Perforce\n'+
                 'Currently in Production.'
         },
         {
@@ -277,7 +300,7 @@ var _data = [{
                 'The rules needs to be processed in particular moment. The program should be able to generate ' +
                 'configuration according to rules. The program should be started as a CLI application but should also ' +
                 'support WEB interface UI. \n\n' +
-                'Tools: Java, Maven, REST, Mockito, Jenkins, GIT\n'+
+                'Tools: Java, Maven, REST, Mockito, Jenkins, Perforce\n'+
                 'Current state: In production.'
         },
         {
@@ -300,7 +323,7 @@ var _data = [{
                 'was using Java Server Pages to render UI. One of a tasks was to migrate old legacy code ' +
                 '(built on Java 5 + HTML generation inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). \n' +
                 'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n' +
-                'Tools: Java, Javascript, Amazon Web Services (s2), Spring, JSON, XML/XSD, jUnit, Mockito, Jenkins, Selenium. \n'+
+                'Tools: Java, Javascript, Amazon Web Services (s2), HTML, CSS, JSP, Servlet, Jackson, Spring, JSON, XML/XSD, jUnit, Mockito, Jenkins, Selenium. \n'+
                 'Currently in production.'
         },
         {
@@ -312,8 +335,11 @@ var _data = [{
             describedPeriod: '5 years 2 months',
             numberOfMember: 4,
             role: 'Software Engineer',
-            description: 'Helping to create electronic agreements. Tracking active and inactive periods. The format provided by Users defined in XML. ' +
-                'The application generates documents for sign and to attach it back. User interface was made according best development practices.'
+            description: 'Application helping to automate creation of electronic agreements process. Tracking active and inactive periods. ' +
+                'The template, provided by Users specified in XML file. ' +
+                'The application generates documents for sign and to attach it back. ' +
+                'User interface have made according to best development practices. \n' +
+                'Currently in Production.'
         }
     ]
 },

@@ -2,17 +2,18 @@ const express = require('express');
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
 
+const defaultFontSize = 12;
+const defaultSectionFontSize = 15;
+const pageWidth = 470;
+const defaultFont = 'Times-Roman';
+const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
+
+const pageLineConfig = {width: pageWidth, align: 'justify'};
+
 var _builder = {
 
     build: function(res, data) {
 
-        const defaultFontSize = 12;
-        const defaultSectionFontSize = 14;
-        const pageWidth = 470;
-        const defaultFont = 'Times-Roman';
-        const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
-
-        const pageLineConfig = {width: pageWidth, align: 'justify'};
         const doc = new PDFDocument();
 
         // doc.on('pageAdded', () =>
@@ -46,16 +47,9 @@ var _builder = {
 
     buildCV: function(res, data) {
 
-        const defaultFontSize = 14;
-        const defaultSectionFontSize = 15;
-        const pageWidth = 470;
-        const pageFont = 'Times-Roman';
-        const boldFont = 'public/fonts/Times-Roman-Bold.ttf';
-
-        const pageLineConfig = {width: pageWidth, align: 'justify'};
         const doc = new PDFDocument();
 
-        doc.font(pageFont);
+        doc.font(defaultFont);
 
         doc.info.Title = data.title + ", Curriculum Vitae";
         doc.info.Subject = "Curriculum Vitae";
@@ -69,25 +63,29 @@ var _builder = {
             .font(boldFont)
             .text(data.title, 220, 30);
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         doc.moveDown();
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         var currentRole = data.positions[data.currentPositionIndex].role;
 
         doc.text(currentRole + ((!data.unbranded)?' at ' + data.companies[data.positions[data.currentPositionIndex].companyId].officialName:''));
 
         doc.moveDown();
+        doc.moveDown();
+        doc.moveDown();
+        doc.moveDown();
 
-        doc.text('Location: ' + data.address);
-        doc.fontSize(5).moveDown().fontSize(defaultFontSize);
+        // // doc.text('Location: ' + data.address);
+        // doc.fontSize(5).moveDown().fontSize(defaultFontSize);
 
-        doc
-            .text('Phone: ' + data.phone)
-            .text('Email: ' + data.email)
-            .text('Skype: ' + data.skype);
+        doc.text('Phone: ' + data.phone);
+        doc.moveDown();
+
+        doc.text('Email: ' + data.email);
+        doc.text('Skype: ' + data.skype);
 
         doc.moveDown();
 
@@ -95,11 +93,11 @@ var _builder = {
             .fontSize(defaultSectionFontSize)
             .text('Summary', 75);
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         doc.moveDown();
 
-        doc.font(pageFont).fontSize(defaultFontSize).text(data.summary, pageLineConfig);
+        doc.font(defaultFont).fontSize(defaultFontSize).text(data.summary, pageLineConfig);
 
         doc.moveDown();
 
@@ -107,15 +105,15 @@ var _builder = {
             .fontSize(defaultSectionFontSize)
             .text('Experience');
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         doc.moveDown();
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
         data.positions.forEach(function(position){
-            doc.font(boldFont).text(position.from + ' - ' + position.to + ', ' + position.role +((!data.unbranded)?' at ' + data.companies[data.positions[data.currentPositionIndex].companyId].officialName:''));
+            doc.font(boldFont).text(position.from + ' - ' + position.to + ', ' + position.role +((!data.unbranded)?' at ' + data.companies[position.companyId].officialName:''));
             doc.moveDown();
-            doc.font(pageFont).text(position.description, pageLineConfig);
+            doc.font(defaultFont).text(position.description, pageLineConfig);
 
             doc.moveDown();
         });
@@ -124,11 +122,11 @@ var _builder = {
             .fontSize(defaultSectionFontSize)
             .text('Education');
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         doc.moveDown();
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         data.schools.forEach(function(school){
             doc.text(school.from + ' - ' + school.to + ', ' + school.name);
@@ -142,11 +140,11 @@ var _builder = {
             .fontSize(defaultSectionFontSize)
             .text('Projects', 75);
 
-        doc.font(pageFont).fontSize(defaultFontSize);
+        doc.font(defaultFont).fontSize(defaultFontSize);
 
         doc.moveDown();
 
-        doc.font(pageFont);
+        doc.font(defaultFont);
 
         data.projects.forEach(function(project){
             doc.font(boldFont).text(project.name).fontSize(defaultFontSize);
@@ -154,13 +152,13 @@ var _builder = {
             doc.font(boldFont).text(data.companies[project.companyId].officialName + ', ' + project.from + ' - ' + project.to + ', ' + project.describedPeriod).fontSize(defaultFontSize);
             doc.fontSize(3).moveDown().fontSize(defaultFontSize);
 
-            doc.font(pageFont).text("Members: " + project.numberOfMember).fontSize(defaultFontSize);
+            doc.font(defaultFont).text("Members: " + project.numberOfMember).fontSize(defaultFontSize);
             doc.fontSize(5).moveDown().fontSize(defaultFontSize);
 
-            doc.font(pageFont).text("Role: " + project.role).fontSize(defaultFontSize);
+            doc.font(defaultFont).text("Role: " + project.role).fontSize(defaultFontSize);
             doc.fontSize(5).moveDown().fontSize(defaultFontSize);
 
-            doc.font(pageFont).text(project.description, pageLineConfig);
+            doc.font(defaultFont).text(project.description, pageLineConfig);
 
             doc.moveDown();
         });
