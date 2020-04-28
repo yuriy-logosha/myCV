@@ -30,7 +30,7 @@ var _data = [{
             ' Apply knowledge of technologies,' +
             ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
             'Tools: Java, Kotlin, Apache Kafka, AWS, Azure, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
-            ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold.'
+            ' Jenkins. BPMN. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold, CQRS.'
         },
         {
             companyId: 2,
@@ -190,7 +190,7 @@ var _data = [{
             description: 'Public transportation currently operating in datacenters as several different applications while maintainability become complex and'+
                 'increasing every iteration. Business decided to move to Cloud and split applications into microservices, micro-applications that responcible only '+
                 'for business its providing. Also business wants to handle penalty operations feature and modern way of payments. \n\n' +
-                'Technologies and Tools: Kotlin, Azure, CosmosDB, Kafka, Kubernetes. \n' +
+                'Technologies and Tools: Kotlin, Azure, CosmosDB, Kafka, Kubernetes, CQRS, Gradle. \n' +
                 'State: In Production, new version in progress'
         },
         {
@@ -230,7 +230,7 @@ var _data = [{
                 'Currently in Production.'
         },
         {
-            name: 'Nordea, Sweeden, Stokholm. Global Fraud Monitoring',
+            name: 'Nordea, Sweeden, Stockholm. Global Fraud Monitoring',
             sphere: 'Banking, Security, Integration',
             companyId: 3,
             from: 'January 2018',
@@ -244,7 +244,7 @@ var _data = [{
                 'Team co-located in several locations and following Agile principles and SAFe practices. \n' +
                 'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. \n' +
                 'Application written on Java using Apache Camel with Spring Boot. \n' +
-                'Technologies and Tools: Java 8, Yaml, Maven, Apache Kafka, Apache Camel, Zookeper, Multithreading, Redis. MapReduce. Hadoop. Mockito. High Availability\n'+
+                'Technologies and Tools: Java 8, Yaml, Maven, Apache Kafka, Apache Camel, Zookeper, Multithreading/Concurency, Redis. MapReduce. Hadoop. Mockito. High Availability\n'+
                 'Currently in Production.'
         },
         {
