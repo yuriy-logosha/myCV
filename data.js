@@ -29,7 +29,7 @@ var _data = [{
             ' of the software product or system or for a specific phase of the lifecycle.' +
             ' Apply knowledge of technologies,' +
             ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
-            'Tools: Java, Kotlin, Apache Kafka, AWS, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
+            'Tools: Java, Kotlin, Apache Kafka, AWS, Azure, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
             ' Jenkins. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold.'
         },
         {
@@ -178,6 +178,21 @@ var _data = [{
         }
     ],
     projects: [
+        {
+            name: 'Cloud Services, Canadian Public Transportation system',
+            sphere: 'Transportation, Billing',
+            companyId: 3,
+            from: 'January 2020',
+            to: 'April 2020',
+            describedPeriod: '4 monthes',
+            numberOfMember: 8,
+            role: 'Kotlin Developer, Java Expert',
+            description: 'Public transportation currently operating in datacenters as several different applications while maintainability become complex and'+
+                'increasing every iteration. Business decided to move to Cloud and split applications into microservices, micro-applications that responcible only '+
+                'for business its providing. Also business wants to handle penalty operations feature and modern way of payments. \n\n' +
+                'Technologies and Tools: Kotlin, Azure, CosmosDB, Kafka, Kubernetes. \n' +
+                'State: In Production, new version in progress'
+        },
         {
             name: 'Ericsson, Sweeden. Basic User Identity',
             sphere: 'Telecommunication, Security',
