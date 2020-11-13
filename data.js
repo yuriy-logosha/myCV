@@ -40,7 +40,7 @@ var _data = [{
             description: 'Engaged in architectural objectives of the project. ' +
                 'Provided architecture overview. Presented "to-be" design solutions and POCs. ' +
                 'Translate business requirements into functional requirements documentation. ' +
-                'Plan team work. Split business requirements into epics. ' +
+                'Plan team work. Split business requirements into epics and stories. ' +
                 'Estimated stories. Planning Poker.' +
                 'Organize development and delivery processes. ' +
                 'Design API and Facade layers, services layer. ' +
@@ -226,7 +226,7 @@ var _data = [{
                 'One of current challenges is to split monolith into micro-services.' +
                 'Mostly it\'s back-end processing service oriented, Weblogic based system. \n\n' +
                 'Technologies and Tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
-                'Logs produced by slf4j collected by Splunk.\n' +
+                'Logs produced by slf4j displayed by Splunk.\n' +
                 'Currently in Production.'
         },
         {
@@ -244,7 +244,8 @@ var _data = [{
                 'Team co-located in several locations and following Agile principles and SAFe practices. \n' +
                 'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. \n' +
                 'Application written on Java using Apache Camel with Spring Boot. \n' +
-                'Technologies and Tools: Java 8, Yaml, Maven, Apache Kafka, Apache Camel, Zookeper, Multithreading/Concurency, Redis. MapReduce. Hadoop. Mockito. High Availability\n'+
+                'Technologies and Tools: Java 8, Yaml, Maven, Apache Kafka, Apache Camel, Zookeper, Multithreading/Concurency, Redis. MapReduce. Hadoop. Mockito. High Availability. \n ' +
+                'Automation scripts on Python.\n'+
                 'Currently in Production.'
         },
         {
