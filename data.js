@@ -13,11 +13,11 @@ var _data = [{
     positions: [
         {
             companyId: 4,
-            role: 'Java, Web Developer',
-            from: 'April 2020',
-            to: 'Present',
+            role: 'Software Developer, SME, Java Expert',
+            from: 'June 2020',
+            to: 'Now',
             description: 'Design, develop and configure software systems. \n' +
-            'Tools: Java, Spring Cloud, Ali Cloud, Spring Boot, Spring Security, JavaScript, React, Yarn.'
+                'Tools: Java 8, 11, Liferay, Spring Boot, Spring Integration, Spring Batch, Spring Security, JavaScript, Vue, Yarn. Openshift. Grafana. Prometheus. Fluentd. Nginx.'
         },
         {
             companyId: 3,
@@ -25,12 +25,12 @@ var _data = [{
             from: 'September 2014',
             to: 'April 2020',
             description: 'Design, develop and configure software systems to meet market and/or client requirements either end-to-end' +
-            ' from analysis, design, implementation, quality assurance (including testing), to delivery and maintenance' +
-            ' of the software product or system or for a specific phase of the lifecycle.' +
-            ' Apply knowledge of technologies,' +
-            ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
-            'Tools: Java, Kotlin, Apache Kafka, AWS, Azure, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
-            ' Jenkins. BPMN. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold, CQRS.'
+                ' from analysis, design, implementation, quality assurance (including testing), to delivery and maintenance' +
+                ' of the software product or system or for a specific phase of the lifecycle.' +
+                ' Apply knowledge of technologies,' +
+                ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
+                'Tools: Java, Kotlin, Apache Kafka, AWS, Azure, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
+                ' Jenkins. BPMN. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold, CQRS.'
         },
         {
             companyId: 2,
@@ -38,59 +38,59 @@ var _data = [{
             from: 'July 2013',
             to: 'September 2014',
             description: 'Engaged in architectural objectives of the project. ' +
-            'Provided architecture overview. Presented "to-be" design solutions and POCs. ' +
-            'Translate business requirements into functional requirements documentation. ' +
-            'Plan team work. Split business requirements into epics. ' +
-            'Estimated stories. Planning Poker.' +
-            'Organize development and delivery processes. ' +
-            'Design API and Facade layers, services layer. ' +
-            'Design project structure and maven dependency. ' +
-            'Describe solutions with required diagrams: behavioral, dependency, relational and entity diagrams. ' +
-            'Produced clean and well documented code. \n\n' +
-            'Used technologies: Servlet, Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
-            'Write and maintain code documentation. ' +
-            'SonarQube for track code and security quality. ' +
-            'Apache Maven for to automate CI.'
+                'Provided architecture overview. Presented "to-be" design solutions and POCs. ' +
+                'Translate business requirements into functional requirements documentation. ' +
+                'Plan team work. Split business requirements into epics. ' +
+                'Estimated stories. Planning Poker.' +
+                'Organize development and delivery processes. ' +
+                'Design API and Facade layers, services layer. ' +
+                'Design project structure and maven dependency. ' +
+                'Describe solutions with required diagrams: behavioral, dependency, relational and entity diagrams. ' +
+                'Produced clean and well documented code. \n\n' +
+                'Used technologies: Servlet, Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
+                'Write and maintain code documentation. ' +
+                'SonarQube for track code and security quality. ' +
+                'Apache Maven for to automate CI.'
         },{
             companyId: 2,
             role: 'Business Solutions Architect',
             from: 'September 2012',
             to: 'July 2013',
             description: 'Together with clients discuss future application and process. ' +
-            'Deliver solution in an Agile way and iteration based manner (Sprints). ' +
-            'Design a solution. Build a class diagram and dependency diagram. ' +
-            'Develop Tomcat based Java solutions.\n\n' +
-            'Tools: Spring MVC, Spring Core, Spring Security. Java, Servlets, JavaScript, jQuery, Bootstrap. Google Apps API. ' +
-            'Write and maintain code documentation.'
+                'Deliver solution in an Agile way and iteration based manner (Sprints). ' +
+                'Design a solution. Build a class diagram and dependency diagram. ' +
+                'Develop Tomcat based Java solutions.\n\n' +
+                'Tools: Spring MVC, Spring Core, Spring Security. Java, Servlets, JavaScript, jQuery, Bootstrap. Google Apps API. ' +
+                'Write and maintain code documentation.'
         },{
             companyId: 2,
             role: 'Java Developer',
             from: 'January 2011',
             to: 'September 2012',
             description: 'Develop UI elements and pages using latest HTML/CSS technologies. '+
-            'Migrate the user interface and UX from plain JavaScript & HTML/CSS to modern framework ExtJS4. ' +
-            'Migrate legacy solution from Java 5 to Java 6. '+
-            'Reorganize JSP structure and JavaScript. ' +
-            'Cover with UI unit and module tests.\n\n' +
-            'Tools: ' +
-            'Java, JSP, JavaScript, ExtJS, JSON, AJAX, HTML, CSS, XML. ' +
-            'Struts, Spring MVC, Hibernate, Ant. JBoss, Apache Tomcat. Oracle DB. Eclipse. Perforce.'
+                'Migrate the user interface and UX from plain JavaScript & HTML/CSS to modern framework ExtJS4. ' +
+                'Migrate legacy solution from Java 5 to Java 6. '+
+                'Reorganize JSP structure and JavaScript. ' +
+                'Cover with UI unit and module tests.\n\n' +
+                'Tools: ' +
+                'Java, JSP, JavaScript, ExtJS, JSON, AJAX, HTML, CSS, XML. ' +
+                'Struts, Spring MVC, Hibernate, Ant. JBoss, Apache Tomcat. Oracle DB. Eclipse. Perforce.'
         },{
             companyId: 0,
             role: 'Software Engineer',
             from: 'January 2006',
             to: 'January 2011',
             description: 'Develop software using Java 5 and 6 versions. \n' +
-            'Build user forms using Misrosoft Visual FoxPro 6, 7 and 9 versions. ' +
-            'Write queries to Sybase database T-SQL language. ' +
-            'Automation of activity of commercial and contractual department. \n' +
-            'Database development: ' +
-            'Plan data structure per module. Create tables, indexes, relations.' +
-            'Modeling diagrams and generate SQL with Power Designer. ' +
-            'Build reach UI elements and forms. Satisfy client with properly working software. \n' +
-            '\n' +
-            'Tools: ' +
-            'Java, HTML, Servlets, HTML, CSS, SQL, XML, JSON, nginx. Oracle, Sybase, DB2'
+                'Build user forms using Misrosoft Visual FoxPro 6, 7 and 9 versions. ' +
+                'Write queries to Sybase database T-SQL language. ' +
+                'Automation of activity of commercial and contractual department. \n' +
+                'Database development: ' +
+                'Plan data structure per module. Create tables, indexes, relations.' +
+                'Modeling diagrams and generate SQL with Power Designer. ' +
+                'Build reach UI elements and forms. Satisfy client with properly working software. \n' +
+                '\n' +
+                'Tools: ' +
+                'Java, HTML, Servlets, HTML, CSS, SQL, XML, JSON, nginx. Oracle, Sybase, DB2'
         }
     ],
     companies: [{
@@ -129,15 +129,15 @@ var _data = [{
                 phone: '+67019700'
             }
         },
-                 {
-                     companyId: 4,
-                     officialName: 'C.T.Co, Riga, Latvia',
-                     contactDetails: {
-                         website: 'https://ctco.lv',
-                         email: 'company@ctco.lv',
-                         phone: '+371 669 520 00'
-                     }
-                 }],
+        {
+            companyId: 4,
+            officialName: 'Küehne + Nagel Int. AG, Tallinn, Estonia',
+            contactDetails: {
+                website: 'https://home.kuehne-nagel.com/',
+                email: 'kntll.itc@kuehne-nagel.com',
+                phone: ''
+            }
+        }],
     schools: [
         {
             name: 'Odessa National Polytechnic University, Ukraine',
@@ -179,12 +179,12 @@ var _data = [{
     ],
     projects: [
         {
-            name: 'Cloud Services, Canadian Public Transportation system',
+            name: 'Cloud Services, Canadian Public Transportation System',
             sphere: 'Transportation, Billing',
             companyId: 3,
             from: 'January 2020',
             to: 'April 2020',
-            describedPeriod: '4 monthes',
+            describedPeriod: '4 month',
             numberOfMember: 8,
             role: 'Kotlin Developer, Java Expert',
             description: 'Public transportation currently operating in datacenters as several different applications while maintainability become complex and'+
@@ -197,9 +197,9 @@ var _data = [{
             name: 'Ericsson, Sweeden. Basic User Identity',
             sphere: 'Telecommunication, Security',
             companyId: 3,
-            from: 'September 2018',
-            to: 'now',
-            describedPeriod: '2 months',
+            from: 'August 2019',
+            to: 'January 2020',
+            describedPeriod: '5 months',
             numberOfMember: 8,
             role: 'Full-Stack Developer, Java Expert, Test Automation SME',
             description: 'When several UI applications using same backend, it needs to identify users making requests. ' +
@@ -208,7 +208,7 @@ var _data = [{
                 'but it needs to be properly configured and has to be able synchronize data from different LDAP sources in proper moment. Also, caring about security, data ' +
                 'needs to be protected from outside. The system needs to be highly available for as external services require it. \n\n' +
                 'Technologies and Tools: Java 7, 8, Python, Groovy. \n' +
-                'State: In Production, maintainability pending'
+                'Already released.'
         },
         {
             name: 'Telenor, Norway, Oslo. Customer Orders System',
@@ -235,7 +235,7 @@ var _data = [{
             companyId: 3,
             from: 'January 2018',
             to: 'July 2018',
-            describedPeriod: '6 months',
+            describedPeriod: '6 month',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer, Test Automation SME',
             description: 'General idea is to prevent from fraud activities. Took analysis system and sent all processing data into it.\n' +
@@ -251,9 +251,9 @@ var _data = [{
             name: 'OP. Finland, Helsinki. Banking Contract Management for Private Customers',
             sphere: 'Banking, Financial, Documents Management',
             companyId: 3,
-            from: ' October 2015',
+            from: 'October 2015',
             to: 'December 2017',
-            describedPeriod: '1 year 10 months',
+            describedPeriod: '1 year 10 month',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
             description: 'Service to help clients register their own organization structure and employees. ' +
@@ -269,11 +269,13 @@ var _data = [{
             sphere: 'Banking, Financial',
             companyId: 3,
             from: 'September 2014',
-            to: ' October 2015',
+            to: 'October 2015',
             describedPeriod: '1 year, 1 month',
             numberOfMember: 6,
             role: 'Full-Stack Developer',
-            description: 'Service for internal use. Placed on a corporate Liferay portal using portlets. ' +
+            description: 'To make internal processes automated OP introduced a system to process claims. ' +
+                'Not public services for internal use only. Placed on a corporate Liferay portal using portlets. ' +
+                'While the portal itself is public. ' +
                 'Clerks wants to see Mainfraim (COBOL) data well organised. ' +
                 'The system needs to stay connected to Mainfraim and be highly available and responsible. Also needs ' +
                 'to be able to retrieve and filter data, and met NFR for performance and corporate UX standards. \n' +
@@ -281,8 +283,8 @@ var _data = [{
                 'Service has been written on Java 7 for JBoss and Liferay. \n' +
                 'Logs collected into Elasticsearch and presented with Kibana.\n' +
                 'JMeter for load testing and performance analyze.\n' +
-                'Splunk for visualize produced logs.\n' +
-                'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Servlets, Spring, PowerMock, Maven, Selenium.' +
+                'Splunk to visualize produced logs.\n' +
+                'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Servlets, Spring, PowerMock, Maven, Selenium.\n' +
                 'Currently in Production.'
         },
         {
@@ -336,7 +338,7 @@ var _data = [{
                 'Developed UI components and web pages using Java 7, HTML5, CSS3 and JavaScript. ' +
                 'Plain Java application was made to help business organize signing contracts process. The application ' +
                 'was using Java Server Pages to render UI. One of a tasks was to migrate old legacy code ' +
-                '(built on Java 5 + HTML generation inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). \n' +
+                '(built on legacy Java with generation of HTML code inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). ' +
                 'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n' +
                 'Tools: Java, Javascript, Amazon Web Services (s2), HTML, CSS, JSP, Servlet, Jackson, Spring, JSON, XML/XSD, jUnit, Mockito, Jenkins, Selenium. \n'+
                 'Currently in production.'
@@ -345,8 +347,8 @@ var _data = [{
             name: 'Corporate Contract Management',
             sphere: 'Documents Management',
             companyId: 0,
-            from: 'Oct 2005',
-            to: 'Dec 2010',
+            from: 'October 2005',
+            to: 'December 2010',
             describedPeriod: '5 years 2 months',
             numberOfMember: 4,
             role: 'Software Engineer',

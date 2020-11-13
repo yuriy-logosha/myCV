@@ -7,23 +7,26 @@ block content
         div.summary
             h1.full-name=title
             if currentPositionIndex >= 0
-                div
-                    div.role #{positions[currentPositionIndex].role}
+                p.role #{positions[currentPositionIndex].role}
                     if unbranded === false
-                        div &nbsp;at&nbsp;
-                        div.companyName #{companies[positions[currentPositionIndex].companyId].officialName}
+                        span &nbsp;at&nbsp;
+                        span.companyName #{companies[positions[currentPositionIndex].companyId].officialName}
+
             p.location Location: #{address}
             p.phone Phone: #{phone}
-            p.email
-                div Email:&nbsp;
+            p.email Email:&nbsp;
                 a(href='mailto:'+ email) #{email}
             p.skype Skype: #{skype}
             p.options.no-print
                 a(href=linkedin, target="_blank") LinkedIn Profile
                 span &nbsp|&nbsp
-                a(href="/pdf/"+id) PDF
+                a(href="/pdf/" + id) PDF
                 span &nbsp|&nbsp
-                a(href="/download/"+id) Download
+                a(href="/pdf/" + id + "?unbranded") PDF (Unbranded)
+                span &nbsp|&nbsp
+                a(href="/download/" + id) Download
+                span &nbsp|&nbsp
+                a(href="/download/" + id + "?unbranded") Download (Unbranded)
 
     div.group.summary
         h3.group-title Summary

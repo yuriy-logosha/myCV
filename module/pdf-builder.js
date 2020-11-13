@@ -74,12 +74,14 @@ var _builder = {
         doc.text(currentRole + ((!data.unbranded)?' at ' + data.companies[data.positions[data.currentPositionIndex].companyId].officialName:''));
 
         doc.moveDown();
-        doc.moveDown();
-        doc.moveDown();
-        doc.moveDown();
+        if(data.unbranded) {
+            doc.moveDown();
+        }
 
-        // // doc.text('Location: ' + data.address);
         // doc.fontSize(5).moveDown().fontSize(defaultFontSize);
+        doc.text('Location: ' + data.address);
+
+        doc.moveDown();
 
         doc.text('Phone: ' + data.phone);
         doc.moveDown();
@@ -111,7 +113,11 @@ var _builder = {
 
         doc.font(defaultFont).fontSize(defaultFontSize);
         data.positions.forEach(function(position){
-            doc.font(boldFont).text(position.from + ' - ' + position.to + ', ' + position.role +((!data.unbranded)?' at ' + data.companies[position.companyId].officialName:''));
+            let at = '';
+            if(!data.unbranded) {
+                at = ` at ${data.companies[position.companyId].officialName}`;
+            }
+            doc.font(boldFont).text(`${position.from} - ${position.to}, ${position.role} `).font(defaultFont).text(`${at}`);
             doc.moveDown();
             doc.font(defaultFont).text(position.description, pageLineConfig);
 
@@ -149,7 +155,12 @@ var _builder = {
         data.projects.forEach(function(project){
             doc.font(boldFont).text(project.name).fontSize(defaultFontSize);
             doc.fontSize(3).moveDown().fontSize(defaultFontSize);
-            doc.font(boldFont).text(data.companies[project.companyId].officialName + ', ' + project.from + ' - ' + project.to + ', ' + project.describedPeriod).fontSize(defaultFontSize);
+            let at = '';
+            if(!data.unbranded) {
+                at = ` at ${data.companies[project.companyId].officialName}, `;
+            }
+
+            doc.font(boldFont).text(`${at}` + project.from + ' - ' + project.to + ', ' + project.describedPeriod).fontSize(defaultFontSize);
             doc.fontSize(3).moveDown().fontSize(defaultFontSize);
 
             doc.font(defaultFont).text("Members: " + project.numberOfMember).fontSize(defaultFontSize);
