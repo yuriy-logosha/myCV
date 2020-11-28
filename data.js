@@ -255,7 +255,7 @@ var _data = [{
                 'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. ' +
                 'Application written on Java using Apache Camel with Spring Boot. \n' +
                 'Technologies and Tools: Spring integration, Java 8/11, Yaml, Maven, Camel, Kafka, Zookeper, Redis. MapReduce. ' +
-                'Hadoop. Mockito. High-Performance, High-Availability, and High-Throughput Processing \n ' +
+                'Hadoop. Mockito. High-Performance, High-Availability, and High-Throughput Processing. \n ' +
                 'Automation scripts on Python.\n'+
                 'Currently in Production.'
         },
