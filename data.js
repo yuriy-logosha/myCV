@@ -179,6 +179,17 @@ var _data = [{
     ],
     projects: [
         {
+            name: 'myKN',
+            sphere: 'Portal',
+            companyId: 4,
+            from: 'June 2020',
+            to: 'October 2020',
+            describedPeriod: '5 month',
+            numberOfMember: 6,
+            role: 'Kotlin Developer, Java Expert',
+            description: 'Portal on Liferay. Many widgets: flight scheduler, hotel booking, exchange integration, etc.\n' +
+                'Technologies and Tools: Kotlin, Java, Liferay, Kafka, Openshift, Gradle, Jenkins.'
+        },{
             name: 'Cloud Services, Canadian Public Transportation System',
             sphere: 'Transportation, Billing',
             companyId: 3,
@@ -186,7 +197,7 @@ var _data = [{
             to: 'April 2020',
             describedPeriod: '4 month',
             numberOfMember: 8,
-            role: 'Kotlin Developer, Java Expert',
+            role: 'Kotlin Developer, Java Expert, Solutions architect, Team Lead',
             description: 'Public transportation currently operating in datacenters as several different applications while maintainability become complex and'+
                 'increasing every iteration. Business decided to move to Cloud and split applications into microservices, micro-applications that responcible only '+
                 'for business its providing. Also business wants to handle penalty operations feature and modern way of payments. \n\n' +
@@ -238,13 +249,13 @@ var _data = [{
             describedPeriod: '6 month',
             numberOfMember: 6,
             role: 'Back-End Java Developer, Full-Stack Developer, Test Automation SME',
-            description: 'General idea is to prevent from fraud activities. Took analysis system and sent all processing data into it.\n' +
-                'Kafka with it\'s topics in a center of big picture. Microservices are using topics are fully configurable and ' +
-                'are able to work asynchronously with its nodes, but also prevent from data duplication when same data sending from different threads. \n' +
-                'Team co-located in several locations and following Agile principles and SAFe practices. \n' +
-                'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. \n' +
+            description: 'Automatically block fraud activity using Falcon. ' +
+                'Kafka with it\'s topics in a center of big picture. Microservices architecture for transfer and process data. \n' +
+                'Team co-located in several locations and following Agile principles and SAFe practices. ' +
+                'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. ' +
                 'Application written on Java using Apache Camel with Spring Boot. \n' +
-                'Technologies and Tools: Java 8, Yaml, Maven, Apache Kafka, Apache Camel, Zookeper, Multithreading/Concurency, Redis. MapReduce. Hadoop. Mockito. High Availability. \n ' +
+                'Technologies and Tools: Spring integration, Java 8/11, Yaml, Maven, Camel, Kafka, Zookeper, Redis. MapReduce. ' +
+                'Hadoop. Mockito. High-Performance, High-Availability, and High-Throughput Processing \n ' +
                 'Automation scripts on Python.\n'+
                 'Currently in Production.'
         },
@@ -282,8 +293,8 @@ var _data = [{
                 'to be able to retrieve and filter data, and met NFR for performance and corporate UX standards. \n' +
                 'Has been implemented reach filtering functionality using Apache Lucene.\n' +
                 'Service has been written on Java 7 for JBoss and Liferay. \n' +
-                'Logs collected into Elasticsearch and presented with Kibana.\n' +
-                'JMeter for load testing and performance analyze.\n' +
+                'Logs collected into Elasticsearch and presented with Kibana. ' +
+                'JMeter for load testing and performance analyze. ' +
                 'Splunk to visualize produced logs.\n' +
                 'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Servlets, Spring, PowerMock, Maven, Selenium.\n' +
                 'Currently in Production.'
