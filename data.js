@@ -179,18 +179,22 @@ var _data = [{
     ],
     projects: [
         {
-            name: 'myKN',
+            name: 'myKN, Liferay Corporate Portal',
             sphere: 'Portal',
             companyId: 4,
             from: 'June 2020',
-            to: 'October 2020',
-            describedPeriod: '5 month',
+            to: 'Now',
+            describedPeriod: '',
             numberOfMember: 6,
             role: 'Kotlin Developer, Java Expert',
-            description: 'Portal on Liferay. Many widgets: flight scheduler, hotel booking, exchange integration, etc.\n' +
-                'Technologies and Tools: Kotlin, Java, Liferay, Kafka, Openshift, Gradle, Jenkins.'
+            description: 'Portal on Liferay for internal use. 3 synchronized pods. ~60k active users. 3-10 requests/second. Corporate SSO integration.\n' +
+                'ELK stack for search and monitoring. Fluentd and nginx as sidecars. Grafana for alerting.\n' +
+                'Responsibility: Design and implement business features. Integrate with existing social services. ' +
+                'Build and monitor CI/CD pipeline on Templates.\n\n' +
+                'Technologies and Tools: Kotlin, Java, Liferay, Kafka, Gradle, Docker, Jenkins. OpenShift.\n\n' +
+                'Released. Pipeline with appox. speed 1 release/day.'
         },{
-            name: 'Cloud Services, Canadian Public Transportation System',
+            name: 'Fairy Services, Canadian Public Transportation System',
             sphere: 'Transportation, Billing',
             companyId: 3,
             from: 'January 2020',
@@ -199,9 +203,9 @@ var _data = [{
             numberOfMember: 8,
             role: 'Kotlin Developer, Java Expert, Solutions architect, Team Lead',
             description: 'Public transportation currently operating in datacenters as several different applications while maintainability become complex and'+
-                'increasing every iteration. Business decided to move to Cloud and split applications into microservices, micro-applications that responcible only '+
+                'increasing every iteration. Business decided to move to Cloud and split applications into microservices, micro-applications that responsible only '+
                 'for business its providing. Also business wants to handle penalty operations feature and modern way of payments. \n\n' +
-                'Technologies and Tools: Kotlin, Azure, CosmosDB, Kafka, Kubernetes, CQRS, Gradle. \n' +
+                'Technologies and Tools: Kotlin Coroutines, Azure, CosmosDB, Kafka, Kubernetes, CQRS, Event Source, Gradle, Spring Boot/Microservices. \n' +
                 'State: In Production, new version in progress'
         },
         {
@@ -253,7 +257,7 @@ var _data = [{
                 'Kafka with it\'s topics in a center of big picture. Microservices architecture for transfer and process data. \n' +
                 'Team co-located in several locations and following Agile principles and SAFe practices. ' +
                 'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. ' +
-                'Application written on Java using Apache Camel with Spring Boot. \n' +
+                'Application written on Java using Apache Camel with Spring Boot. \n\n' +
                 'Technologies and Tools: Spring integration, Java 8/11, Yaml, Maven, Camel, Kafka, Zookeper, Redis. MapReduce. ' +
                 'Hadoop. Mockito. High-Performance, High-Availability, and High-Throughput Processing. \n ' +
                 'Automation scripts on Python.\n'+
@@ -268,11 +272,16 @@ var _data = [{
             describedPeriod: '1 year 10 month',
             numberOfMember: 7,
             role: 'Full-Stack Developer',
-            description: 'Service to help clients register their own organization structure and employees. ' +
+            description: 'Online service to help clients register their own (small business) organization structure and employees. ' +
                 'That`s allow small business generate bills for services provided without leaving online bank application or directly from mobile phone. ' +
-                'And allow common clients display unpayed and payed bills directly near bank account. ' +
-                'Application gives ability to manipulate with an accesses and privileges as not all employees needs to see everything. ' +
-                'Also this information shared with third party services by providing full REST API. \n' +
+                'And allow common clients display unpayed and payed bills directly in bank account and to control it from same applications. ' +
+                'As not all employees needs to see everything, the services very flexible with an accesses and privileges. ' +
+                'Also this information shared with third party services by providing full REST API and support versioning. Uses Apegee to route and manage access to API.\n' +
+                'Architecture & Design: Three tire architecture based on microservices and CQS approach.\n' +
+                'REST communication between layers. While internal EJB calls between business layer and components. ' +
+                'Component layer (EJB) represented database on JDBC to DB2 same as other databases uses views. ' +
+                'While Business and Representation layers handled read and write requests separately. MVC for read and view services. Domain Driven Design for Business layer.\n' +
+                'Stored procedures gives low cohesion as not needed to expose DB structure to components. \n' +
                 'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Maven, Virtualbox.\n' +
                 'Currently in production.'
         },
@@ -295,7 +304,7 @@ var _data = [{
                 'Service has been written on Java 7 for JBoss and Liferay. \n' +
                 'Logs collected into Elasticsearch and presented with Kibana. ' +
                 'JMeter for load testing and performance analyze. ' +
-                'Splunk to visualize produced logs.\n' +
+                'Splunk to visualize produced logs.\n\n' +
                 'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Servlets, Spring, PowerMock, Maven, Selenium.\n' +
                 'Currently in Production.'
         },
@@ -351,7 +360,7 @@ var _data = [{
                 'Plain Java application was made to help business organize signing contracts process. The application ' +
                 'was using Java Server Pages to render UI. One of a tasks was to migrate old legacy code ' +
                 '(built on legacy Java with generation of HTML code inside) to a modern MVC framework (Java 7 + Servlets + ExtJS). ' +
-                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n' +
+                'Project has been splitted onto backend (Java + Spring) and frontend on Node JS. \n\n' +
                 'Tools: Java, Javascript, Amazon Web Services (s2), HTML, CSS, JSP, Servlet, Jackson, Spring, JSON, XML/XSD, jUnit, Mockito, Jenkins, Selenium. \n'+
                 'Currently in production.'
         },

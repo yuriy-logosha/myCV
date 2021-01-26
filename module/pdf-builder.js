@@ -160,7 +160,7 @@ var _builder = {
                 at = ` at ${data.companies[project.companyId].officialName}, `;
             }
 
-            doc.font(boldFont).text(`${at}` + project.from + ' - ' + project.to + ', ' + project.describedPeriod).fontSize(defaultFontSize);
+            doc.font(boldFont).text(`${at}${project.from} - ${project.to} ${(project.describedPeriod)?', ' + project.describedPeriod: ''}`).fontSize(defaultFontSize);
             doc.fontSize(3).moveDown().fontSize(defaultFontSize);
 
             doc.font(defaultFont).text("Members: " + project.numberOfMember).fontSize(defaultFontSize);
