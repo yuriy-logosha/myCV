@@ -13,11 +13,11 @@ var _data = [{
     positions: [
         {
             companyId: 4,
-            role: 'Software Developer, SME, Java Expert',
+            role: 'Senior Software Developer, Java Expert',
             from: 'June 2020',
             to: 'Now',
-            description: 'Design, develop and configure software systems. \n' +
-                'Tools: Java 8, 11, Liferay, Spring Boot, Spring Integration, Spring Batch, Spring Security, JavaScript, Vue, Yarn. Openshift. Grafana. Prometheus. Fluentd. Nginx.'
+            description: 'Design, develop and deliver software systems to delights internal users. \n' +
+                'Tools: Java 8, 11, Kotlin, Liferay, Spring Boot, Spring Integration, Postgres, Elastic, JavaScript, Vue, Yarn. OpenShift. Grafana. Prometheus. Fluentd. Nginx.'
         },
         {
             companyId: 3,
@@ -31,41 +31,21 @@ var _data = [{
                 ' applications, methodologies, processes and tools to support a client, project or entity. \n' +
                 'Tools: Java, Kotlin, Apache Kafka, AWS, Azure, GIT, Spring, Spring Boot, Spring Data, JavaScript, jQuery, Maven, Gradle, Docker, TDD, BDD, Unit and Automation tests.' +
                 ' Jenkins. BPMN. Apache Tomcat, Jetty, Jboss, Liferay, Node.JS, ReactJS, Angular 5, VUE.JS, Bower, Karma, Cucumber, Bootstrap 4, Kubernetes, Skaffold, CQRS.'
-        },
-        {
-            companyId: 2,
-            role: 'Technical Lead, Java Expert',
-            from: 'July 2013',
-            to: 'September 2014',
-            description: 'Engaged in architectural objectives of the project. ' +
-                'Provided architecture overview. Presented "to-be" design solutions and POCs. ' +
-                'Translate business requirements into functional requirements documentation. ' +
-                'Plan team work. Split business requirements into epics and stories. ' +
-                'Estimated stories. Planning Poker.' +
-                'Organize development and delivery processes. ' +
-                'Design API and Facade layers, services layer. ' +
-                'Design project structure and maven dependency. ' +
-                'Describe solutions with required diagrams: behavioral, dependency, relational and entity diagrams. ' +
-                'Produced clean and well documented code. \n\n' +
-                'Used technologies: Servlet, Spring MVC, Core, JavaScript, jQuery, Angular. Google Apps API. ' +
-                'Write and maintain code documentation. ' +
-                'SonarQube for track code and security quality. ' +
-                'Apache Maven for to automate CI.'
         },{
             companyId: 2,
             role: 'Business Solutions Architect',
             from: 'September 2012',
-            to: 'July 2013',
-            description: 'Together with clients discuss future application and process. ' +
-                'Deliver solution in an Agile way and iteration based manner (Sprints). ' +
+            to: 'September 2014',
+            description:
+                'Deliver solution in an Agile way and in sprints. Plan - develop - test - learn. ' +
                 'Design a solution. Build a class diagram and dependency diagram. ' +
                 'Develop Tomcat based Java solutions.\n\n' +
                 'Tools: Spring MVC, Spring Core, Spring Security. Java, Servlets, JavaScript, jQuery, Bootstrap. Google Apps API. ' +
                 'Write and maintain code documentation.'
         },{
             companyId: 2,
-            role: 'Java Developer',
-            from: 'January 2011',
+            role: 'Senior Java Developer',
+            from: 'September 2010',
             to: 'September 2012',
             description: 'Develop UI elements and pages using latest HTML/CSS technologies. '+
                 'Migrate the user interface and UX from plain JavaScript & HTML/CSS to modern framework ExtJS4. ' +
@@ -79,7 +59,7 @@ var _data = [{
             companyId: 0,
             role: 'Software Engineer',
             from: 'January 2006',
-            to: 'January 2011',
+            to: 'September 2010',
             description: 'Develop software using Java 5 and 6 versions. \n' +
                 'Build user forms using Misrosoft Visual FoxPro 6, 7 and 9 versions. ' +
                 'Write queries to Sybase database T-SQL language. ' +
@@ -179,20 +159,19 @@ var _data = [{
     ],
     projects: [
         {
-            name: 'myKN, Liferay Corporate Portal',
+            name: 'myKN, Liferay DXP Corporate Portal',
             sphere: 'Portal',
             companyId: 4,
             from: 'June 2020',
             to: 'Now',
             describedPeriod: '',
             numberOfMember: 6,
-            role: 'Kotlin Developer, Java Expert',
-            description: 'Portal on Liferay for internal use. 3 synchronized pods. ~60k active users. 3-10 requests/second. Corporate SSO integration.\n' +
-                'ELK stack for search and monitoring. Fluentd and nginx as sidecars. Grafana for alerting.\n' +
+            role: 'Full-Stack Developer',
+            description: 'Portal on Liferay DXP for internal users. 3 synchronized pods. ~60k active users. 3-10 requests/second. SSO integration.\n' +
+                'Elastic stack for search in application and monitoring application statuses and logs. Fluentd and nginx as sidecars. Grafana for alerting.\n' +
                 'Responsibility: Design and implement business features. Integrate with existing social services. ' +
-                'Build and monitor CI/CD pipeline on Templates.\n\n' +
-                'Technologies and Tools: Kotlin, Java, Liferay, Kafka, Gradle, Docker, Jenkins. OpenShift.\n\n' +
-                'Released. Pipeline with appox. speed 1 release/day.'
+                'Build and monitor CI/CD pipeline on  docker Templates.\n\n' +
+                'Technologies and Tools: Kotlin, Java, Liferay DXP, Kafka, Spring, NodeJS, Gradle, Docker, Jenkins. OpenShift.'
         },{
             name: 'Fairy Services, Canadian Public Transportation System',
             sphere: 'Transportation, Billing',
@@ -201,22 +180,22 @@ var _data = [{
             to: 'April 2020',
             describedPeriod: '4 month',
             numberOfMember: 8,
-            role: 'Kotlin Developer, Java Expert, Solutions architect, Team Lead',
+            role: 'Kotlin\\Java Developer, Team Lead',
             description: 'Public transportation currently operating in datacenters as several different applications while maintainability become complex and'+
                 'increasing every iteration. Business decided to move to Cloud and split applications into microservices, micro-applications that responsible only '+
                 'for business its providing. Also business wants to handle penalty operations feature and modern way of payments. \n\n' +
-                'Technologies and Tools: Kotlin Coroutines, Azure, CosmosDB, Kafka, Kubernetes, CQRS, Event Source, Gradle, Spring Boot/Microservices. \n' +
+                'Technologies and Tools: Kotlin Coroutines, Azure, CosmosDB, Kafka, Kubernetes, CQRS, Event Source, OpenAPI, Gradle, Spring Boot\\Microservices. \n' +
                 'State: In Production, new version in progress'
         },
         {
-            name: 'Ericsson, Sweeden. Basic User Identity',
+            name: 'Ericsson, Sweden. Basic User Identity',
             sphere: 'Telecommunication, Security',
             companyId: 3,
             from: 'August 2019',
             to: 'January 2020',
             describedPeriod: '5 months',
             numberOfMember: 8,
-            role: 'Full-Stack Developer, Java Expert, Test Automation SME',
+            role: 'Full-Stack Developer',
             description: 'When several UI applications using same backend, it needs to identify users making requests. ' +
                 'Client has many distributed system\\services that uses the same single app for identify users. ' +
                 'OpenIDM solution provide necessary tools to give that flexibility, ' +
@@ -233,14 +212,14 @@ var _data = [{
             to: 'July 2019',
             describedPeriod: '1 year',
             numberOfMember: 35,
-            role: 'Solution Architect, Full-Stack Developer, Test Automation SME',
+            role: 'Solution Architect, Full-Stack Developer',
             description: 'The company combined streems of data coming from different applications/channels ' +
                 'like from mobile devices and WEB application, batch processes into the single, monolithic application ' +
                 'that handle all requests and respond in a high speed manner. The system needs to support old ' +
                 'legacy mainframe databases and provide services for SAP HANA. ' +
                 'One of current challenges is to split monolith into micro-services.' +
                 'Mostly it\'s back-end processing service oriented, Weblogic based system. \n\n' +
-                'Technologies and Tools: Java 8, Gradle, SOAP, REST, Apache CXF, Spring 4. Vagrant. \n' +
+                'Technologies and Tools: Java 8, Spring Framework, Spring Data, Gradle, SOAP, REST, Apache CXF. Vagrant. \n' +
                 'Logs produced by slf4j displayed by Splunk.\n' +
                 'Currently in Production.'
         },
@@ -252,14 +231,14 @@ var _data = [{
             to: 'July 2018',
             describedPeriod: '6 month',
             numberOfMember: 6,
-            role: 'Back-End Java Developer, Full-Stack Developer, Test Automation SME',
+            role: 'Full-Stack Developer',
             description: 'Automatically block fraud activity using Falcon. ' +
                 'Kafka with it\'s topics in a center of big picture. Microservices architecture for transfer and process data. \n' +
                 'Team co-located in several locations and following Agile principles and SAFe practices. ' +
                 'For support continuously build and deploy the app, have been configured Jenkins jobs with pipelines plugin. ' +
                 'Application written on Java using Apache Camel with Spring Boot. \n\n' +
-                'Technologies and Tools: Spring integration, Java 8/11, Yaml, Maven, Camel, Kafka, Zookeper, Redis. MapReduce. ' +
-                'Hadoop. Mockito. High-Performance, High-Availability, and High-Throughput Processing. \n ' +
+                'Technologies and Tools: Spring integration, Java 8\\11, Yaml, Maven, Camel, Kafka, Zookeper, Redis. MapReduce. ' +
+                'Hadoop. Mockito. High-Performance, High-Availability, and High-Throughput Processing. ' +
                 'Automation scripts on Python.\n'+
                 'Currently in Production.'
         },
@@ -277,12 +256,12 @@ var _data = [{
                 'And allow common clients display unpayed and payed bills directly in bank account and to control it from same applications. ' +
                 'As not all employees needs to see everything, the services very flexible with an accesses and privileges. ' +
                 'Also this information shared with third party services by providing full REST API and support versioning. Uses Apegee to route and manage access to API.\n' +
-                'Architecture & Design: Three tire architecture based on microservices and CQS approach.\n' +
+                'Architecture & Design: 3 tire architecture based on microservices and CQS approach.\n' +
                 'REST communication between layers. While internal EJB calls between business layer and components. ' +
                 'Component layer (EJB) represented database on JDBC to DB2 same as other databases uses views. ' +
                 'While Business and Representation layers handled read and write requests separately. MVC for read and view services. Domain Driven Design for Business layer.\n' +
                 'Stored procedures gives low cohesion as not needed to expose DB structure to components. \n' +
-                'Technologies and Tools: Java 8, Spring, EJB, DAO, DB2, Maven, Virtualbox.\n' +
+                'Technologies and Tools: Java 8, Spring Data\\REST, EJB, DAO, DB2, NodeJs, Maven, Virtualbox.\n' +
                 'Currently in production.'
         },
         {
@@ -316,12 +295,12 @@ var _data = [{
             to: 'September 2014',
             describedPeriod: '1 year 1 month',
             numberOfMember: 6,
-            role: 'Solution Architect, SME, Team Lead',
+            role: 'Solution Architect, Team Lead',
             description: 'Lead a team of 6 engineers distributed geographically. \n' +
                 'Direct, review, and approve features design and changes. Architected solutions for Contract Management Application. ' +
                 'Team produced many client specific configurations for Contract Life Cycle Management application. ' +
                 'Integrated Contract Life Cycle Management with electronic signatures services: Ecosign and Docusign.\n\n' +
-                'Tools: PowerPoint, Java, Maven, JSON, XML, Javascript, Jenkins, SonarQube, Perforce\n'+
+                'Tools: AWS, Java 7, Maven\\Gradle, REST, XML, Javascript, Jenkins, SonarQube, Perforce\n'+
                 'Currently in Production.'
         },
         {

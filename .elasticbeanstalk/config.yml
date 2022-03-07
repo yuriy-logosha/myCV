@@ -1,0 +1,17 @@
+branch-defaults:
+  master:
+    environment: null
+global:
+  application_name: myCV
+  branch: master
+  default_ec2_keyname: aws-eb
+  default_platform: Docker 20.10.7-ce
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: viza-d
+  sc: git
+  workspace_type: Application

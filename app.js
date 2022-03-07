@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var router = express.Router();
 
+var index = require('./routes/index');
 var ylogosha = require('./routes/ylogosha');
 var cv = require('./routes/cv');
 var pdf = require('./routes/pdf');
@@ -27,10 +28,11 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/node_modules/quill/dist')));
 app.use(express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 
-app.use('/', ylogosha);
-app.use('/cv', cv);
-app.use('/pdf', pdf);
-app.use('/download', download);
+app.use('/', index);
+// app.use('/ylogosha', ylogosha);
+// app.use('/cv', cv);
+// app.use('/pdf', pdf);
+// app.use('/download', download);
 
 
 // catch 404 and forward to error handler

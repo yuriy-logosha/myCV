@@ -140,6 +140,21 @@ var _builder = {
             doc.moveDown();
         });
 
+        doc.font(boldFont)
+            .fontSize(defaultSectionFontSize)
+            .text('Certificates');
+
+        doc.font(defaultFont).fontSize(defaultFontSize);
+
+        doc.moveDown();
+
+        doc.font(defaultFont).fontSize(defaultFontSize);
+
+        data.certificates.forEach(function(certificate){
+            doc.text(certificate.title + ', ' + certificate.issued);
+            doc.moveDown();
+        });
+
         doc.addPage();
 
         doc.font(boldFont)
@@ -173,13 +188,6 @@ var _builder = {
 
             doc.moveDown();
         });
-
-        // const range = doc.bufferedPageRange(); // => { start: 0, count: 2 }
-        // for (i = range.start, end = range.start + range.count, range.start <= end; i < end; i++) {
-        //     doc.switchToPage(i);
-        //     doc.text(`Page ${i + 1} of ${range.count}`);
-        // }
-
 
         doc.pipe(res);
 

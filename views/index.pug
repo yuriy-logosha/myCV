@@ -2,90 +2,49 @@ extends layout
 
 block content
     div.group.head
-        div.picture
-            a(href="/images/"+id+".jpg", target="_blank"): img(src="/images/"+id+".jpg")
         div.summary
             h1.full-name=title
-            if currentPositionIndex >= 0
-                p.role #{positions[currentPositionIndex].role}
-                    if unbranded === false
-                        span &nbsp;at&nbsp;
-                        span.companyName #{companies[positions[currentPositionIndex].companyId].officialName}
 
-            p.location Location: #{address}
-            p.phone Phone: #{phone}
-            p.email Email:&nbsp;
-                a(href='mailto:'+ email) #{email}
-            p.skype Skype: #{skype}
-            p.options.no-print
-                a(href=linkedin, target="_blank") LinkedIn Profile
-                span &nbsp|&nbsp
-                a(href="/pdf/" + id) PDF
-                span &nbsp|&nbsp
-                a(href="/pdf/" + id + "?unbranded") PDF (Unbranded)
-                span &nbsp|&nbsp
-                a(href="/download/" + id) Download
-                span &nbsp|&nbsp
-                a(href="/download/" + id + "?unbranded") Download (Unbranded)
 
-    div.group.summary
-        h3.group-title Summary
-        p.description=summary
+    form(action='/', method='POST')
 
-    if positions
-        div.group.experience
-            h3.group-title Experience
-            div.position
-                for position in positions
-                    span.title #{position.role}
-                    if unbranded === false
-                        span &nbsp;at&nbsp;
-                        a(href=companies[position.companyId].contactDetails.website) #{companies[position.companyId].officialName}
-                    div.period #{position.from} - #{position.to}
-                    p.description=position.description
+        p
+            div.item=lastName
+                input(type='text', name='lastName', value='')
+            div.item=lastName2
+                input(type='text', name='lastName2', value='')
+            div.item=firstName
+                input(type='text', name='firstName', value='')
+            div.item=birthdayDate
+                input(type='date', name='birthdayDate', value='')
+            div.item=birthdayPlace
+                input(type='text', name='birthdayPlace', value='')
+            div.item=birthdayCountry
+                input(type='text', name='birthdayCountry', value='')
+            div.item=country
+                input(type='text', name='country', value='')
+            div.item=country2
+                input(type='text', name='country2', value='')
+            div.item=sex
+                input(type='text', name='sex', value='')
+            div.item=family
+                input(type='text', name='family', value='')
+            div.item=item11Title
+                input(type='text', name='item11Title', value='')
+            div.item=idTitle
+                input(type='text', name='idTitle', value='')
+            div.item=passType
+                input(type='text', name='passType', value='')
+            div.item=passNumber
+                input(type='text', name='passNumber', value='')
+            div.item=passDate
+                input(type='date', name='passDate', value='')
+            div.item=givenBy
+                input(type='text', name='givenBy', value='')
+            div.item=homeAddress
+                input(type='text', name='homeAddress', value='')
+            div.item=phone
+                input(type='text', name='phone', value='')
 
-    div.group.education
-        h3.group-title Education
-        for school in schools
-            div.school
-                div.picture
-                    a(href=school.url, target="_blank").badge: img(src=school.logo)
-                div.summary
-                    div.title=school.name
-                    p #{school.from} - #{school.to}
-                    p=school.graduationLevel
 
-    if certificates
-        div.group.certificates
-            h3.group-title Certifications
-            for certificate in certificates
-                div.certificate
-                    div.picture
-                        a(href=certificate.url, target="_blank").badge: img(src=certificate.logo)
-                    div.summary
-                        div.title=certificate.title
-                        p.validity=certificate.issued
-
-    if patents
-        div.group.patents
-            h3.group-title Patents
-            for patent in patents
-                div.patent
-                    div.summary
-                        div.title=patent.title
-                        div.validity=patent.issued
-                        p.no-print
-                            a(href=patent.url) See patent
-
-    if projects
-        div.group.projects
-            h3.group-title Projects
-            for project in projects
-                div.project
-                    div.summary
-                        div.name=project.name
-                        if unbranded === false
-                            a(href=companies[project.companyId].contactDetails.website) #{companies[project.companyId].officialName}, #{project.from} - #{project.to}, #{project.describedPeriod}
-                        div Members: #{project.numberOfMember}
-                        div Role: #{project.role}
-                        p.description=project.description
+        input(type='submit', value='Create')
