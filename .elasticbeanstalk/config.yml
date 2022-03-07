@@ -1,6 +1,12 @@
 branch-defaults:
+  anketa:
+    environment: prod
   master:
     environment: null
+environment-defaults:
+  prod:
+    branch: master
+    repository: viza-d
 global:
   application_name: myCV
   branch: master
